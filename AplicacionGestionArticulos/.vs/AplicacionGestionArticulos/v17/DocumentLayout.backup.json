@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\almendr4\\Documents\\UTN\\programacion 3\\aplicacion-gestion-articulos\\AplicacionGestionArticulos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7362A3D4-A8D3-4E1E-AFD1-9F8323E88D80}|AplicacionGestionArticulos.csproj|c:\\users\\almendr4\\documents\\utn\\programacion 3\\aplicacion-gestion-articulos\\aplicaciongestionarticulos\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7362A3D4-A8D3-4E1E-AFD1-9F8323E88D80}|AplicacionGestionArticulos.csproj|solutionrelative:articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Articulo.cs",
+              "DocumentMoniker": "C:\\Users\\almendr4\\Documents\\UTN\\programacion 3\\aplicacion-gestion-articulos\\AplicacionGestionArticulos\\Articulo.cs",
+              "RelativeDocumentMoniker": "Articulo.cs",
+              "ToolTip": "C:\\Users\\almendr4\\Documents\\UTN\\programacion 3\\aplicacion-gestion-articulos\\AplicacionGestionArticulos\\Articulo.cs",
+              "RelativeToolTip": "Articulo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T20:04:37.424Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
