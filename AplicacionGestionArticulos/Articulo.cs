@@ -15,7 +15,7 @@ namespace AplicacionGestionArticulos
         public string Descripcion { get; set; }
         public Marca Marca { get; set; }
         public Categoria Categoria { get; set; }
-        public ImagenArticulo Imagen { get; set; }
+        public List<Image> Imagenes { get; set; }
         public decimal Precio { get; set; }
     }
 }
