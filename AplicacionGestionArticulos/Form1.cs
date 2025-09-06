@@ -16,5 +16,20 @@ namespace AplicacionGestionArticulos
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show ("Organizá, encontrá y compartí tus artículos fácilmente");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Estás a un paso de sumar un nuevo artículo.");
+        }
     }
 }
