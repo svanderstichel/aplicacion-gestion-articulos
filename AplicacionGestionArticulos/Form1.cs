@@ -30,6 +30,8 @@ namespace AplicacionGestionArticulos
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Estás a un paso de sumar un nuevo artículo.");
+            FrmAltaArticulo ventana = new FrmAltaArticulo();
+            ventana.ShowDialog();
         }
     }
 }
