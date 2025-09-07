@@ -32,9 +32,7 @@
             this.articulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.búsquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,9 +62,7 @@
             this.articulosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearToolStripMenuItem,
             this.modificarToolStripMenuItem,
-            this.eliminarToolStripMenuItem,
-            this.listarToolStripMenuItem,
-            this.búsquedaToolStripMenuItem});
+            this.listarToolStripMenuItem});
             this.articulosToolStripMenuItem.Name = "articulosToolStripMenuItem";
             this.articulosToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.articulosToolStripMenuItem.Text = "&Articulos";
@@ -85,23 +81,30 @@
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
+<<<<<<< HEAD
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
             this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
+=======
+>>>>>>> de8b698 (Se añadio la ventana listar que contiene las funcionalidades de listar, filtrar y eliminar articulos)
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
             this.listarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.listarToolStripMenuItem.Text = "Listar";
+<<<<<<< HEAD
             // 
             // búsquedaToolStripMenuItem
             // 
             this.búsquedaToolStripMenuItem.Name = "búsquedaToolStripMenuItem";
             this.búsquedaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.búsquedaToolStripMenuItem.Text = "Buscar";
+=======
+            this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
+>>>>>>> de8b698 (Se añadio la ventana listar que contiene las funcionalidades de listar, filtrar y eliminar articulos)
             // 
             // marcasToolStripMenuItem
             // 
@@ -114,7 +117,11 @@
             // administrarToolStripMenuItem
             // 
             this.administrarToolStripMenuItem.Name = "administrarToolStripMenuItem";
+<<<<<<< HEAD
             this.administrarToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+=======
+            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+>>>>>>> de8b698 (Se añadio la ventana listar que contiene las funcionalidades de listar, filtrar y eliminar articulos)
             this.administrarToolStripMenuItem.Text = "Administrar";
             // 
             // categoriasToolStripMenuItem
@@ -128,7 +135,11 @@
             // administrarToolStripMenuItem1
             // 
             this.administrarToolStripMenuItem1.Name = "administrarToolStripMenuItem1";
+<<<<<<< HEAD
             this.administrarToolStripMenuItem1.Size = new System.Drawing.Size(169, 26);
+=======
+            this.administrarToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
+>>>>>>> de8b698 (Se añadio la ventana listar que contiene las funcionalidades de listar, filtrar y eliminar articulos)
             this.administrarToolStripMenuItem1.Text = "Administrar";
             // 
             // acercaToolStripMenuItem
@@ -142,7 +153,11 @@
             // bienvenidaToolStripMenuItem
             // 
             this.bienvenidaToolStripMenuItem.Name = "bienvenidaToolStripMenuItem";
+<<<<<<< HEAD
             this.bienvenidaToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+=======
+            this.bienvenidaToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+>>>>>>> de8b698 (Se añadio la ventana listar que contiene las funcionalidades de listar, filtrar y eliminar articulos)
             this.bienvenidaToolStripMenuItem.Text = "Bienvenida";
             this.bienvenidaToolStripMenuItem.Click += new System.EventHandler(this.bienvenidaToolStripMenuItem_Click);
             // 
@@ -176,9 +191,7 @@
         private System.Windows.Forms.ToolStripMenuItem acercaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem búsquedaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bienvenidaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem1;

@@ -28,7 +28,7 @@ namespace AplicacionGestionArticulos
         private void crearToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-        //verifica que la tabla no exista antes de instanciarla
+        //verifica que la ventana no exista antes de instanciarla
         foreach (var item in Application.OpenForms)
         {
             if (item.GetType() == typeof(FrmAltaArticulo))
@@ -47,7 +47,7 @@ namespace AplicacionGestionArticulos
 
         private void bienvenidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //verifica que la tabla no exista antes de instanciarla
+            //verifica que la ventana no exista antes de instanciarla
             foreach (var item in Application.OpenForms)
             {
                 if (item.GetType() == typeof(FrmBienvenida))
@@ -64,6 +64,28 @@ namespace AplicacionGestionArticulos
             frmBienvenida.MdiParent = this;
             frmBienvenida.Show();
         }
+
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //verifica que la ventana no exista antes de instanciarla
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(FrmListarArticulos))
+                    return;
+            }
+            // Cierro todos las ventanas abiertas
+            foreach (Form form in this.MdiChildren)
+            {
+                form.Close();
+            }
+
+            //instancia ventana de bienvenida
+            FrmListarArticulos frmListarArticulos = new FrmListarArticulos();
+            frmListarArticulos.MdiParent = this;
+            frmListarArticulos.Show();
+        }
+    }
+}
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         { 
