@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AplicacionGestionArticulos
 {
-    public partial class FrmAltaArticulo : Form
+    public partial class FrmModificarArticulo : Form
     {
-        public FrmAltaArticulo()
+        public FrmModificarArticulo()
         {
             InitializeComponent();
-        }
-
-        private void Guardar_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Articulo agregado con exito");
         }
 
 
