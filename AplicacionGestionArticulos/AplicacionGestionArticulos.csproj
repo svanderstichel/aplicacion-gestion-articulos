@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Articulo.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="FrmListarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListarArticulo.Designer.cs">
+      <DependentUpon>FrmListarArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBienvenida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmBienvenida.resx">
       <DependentUpon>FrmBienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListarArticulo.resx">
+      <DependentUpon>FrmListarArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModificarArticulo.resx">
       <DependentUpon>FrmModificarArticulo.cs</DependentUpon>

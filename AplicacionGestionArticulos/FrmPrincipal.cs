@@ -83,6 +83,25 @@ namespace AplicacionGestionArticulos
                 frmModificarArticulo.MdiParent = this;
                 frmModificarArticulo.Show();
             }
+
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //verifica que la tabla no exista antes de instanciarla
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(FrmListarArticulo))
+                    return;
+            }
+            // Cierro todos las ventanas abiertas
+            foreach (Form form in this.MdiChildren)
+            {
+                form.Close();
+            }
+            //instancia ventana de modificar articulo
+            FrmListarArticulo frmListarArticulo = new FrmListarArticulo();
+            frmListarArticulo.MdiParent = this;
+            frmListarArticulo.Show();
         }
+    }
     }
 
