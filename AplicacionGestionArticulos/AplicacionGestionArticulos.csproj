@@ -54,19 +54,11 @@
     <Compile Include="FrmBienvenida.Designer.cs">
       <DependentUpon>FrmBienvenida.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="FrmModificarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmModificarArticulo.Designer.cs">
       <DependentUpon>FrmModificarArticulo.cs</DependentUpon>
-=======
-    <Compile Include="FrmListarArticulos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmListarArticulos.Designer.cs">
-      <DependentUpon>FrmListarArticulos.cs</DependentUpon>
->>>>>>> de8b698 (Se añadio la ventana listar que contiene las funcionalidades de listar, filtrar y eliminar articulos)
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -87,13 +79,8 @@
     <EmbeddedResource Include="FrmBienvenida.resx">
       <DependentUpon>FrmBienvenida.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="FrmModificarArticulo.resx">
       <DependentUpon>FrmModificarArticulo.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="FrmListarArticulos.resx">
-      <DependentUpon>FrmListarArticulos.cs</DependentUpon>
->>>>>>> de8b698 (Se añadio la ventana listar que contiene las funcionalidades de listar, filtrar y eliminar articulos)
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
