@@ -124,27 +124,47 @@ namespace AplicacionGestionArticulos
         private void administrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //verifica que la tabla no exista antes de instanciarla
-            //foreach (var item in Application.OpenForms)
-            // {
-            // if (item.GetType() == typeof(frmMarcas)) 
-            // {
-            //MessageBox.Show("Ya existe una ventaba abierta, complete los campos");
-            //return;
-        //}
-        //  }
-        // Cierro todos las ventanas abiertas
-        //foreach (Form form in this.MdiChildren)
-        // {
-        // form.Close();
-        //}
-        //instancia ventana de modificar articulo
-        //frmMarcas marca = new frmMarcas();
-        //marca.MdiParent = this;
-        // marca.Show ();
+            foreach (var item in Application.OpenForms)
+            {
+            if (item.GetType() == typeof(FrmMarcas)) 
+                {
+                MessageBox.Show("Ya existe una ventaba abierta, complete los campos");
+                return;
+                }
+            }
+            // Cierro todos las ventanas abiertas
+            foreach (Form form in this.MdiChildren)
+            {
+            form.Close();
+            }
+            //instancia ventana de modificar articulo
+            FrmMarcas frmMarca = new FrmMarcas();
+            frmMarca.MdiParent = this;
+            frmMarca.Show();
+        }
 
+        private void administrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //verifica que la tabla no exista antes de instanciarla
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(FrmCategorias))
+                {
+                    MessageBox.Show("Ya existe una ventaba abierta, complete los campos");
+                    return;
+                }
+            }
+            // Cierro todos las ventanas abiertas
+            foreach (Form form in this.MdiChildren)
+            {
+                form.Close();
+            }
 
-
+            //instancia ventana de bienvenida
+            FrmCategorias frmCategorias = new FrmCategorias();
+            frmCategorias.MdiParent = this;
+            frmCategorias.Show();
+        }
     }
-    }
-    }
+}
 

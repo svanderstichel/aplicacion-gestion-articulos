@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Articulo.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="FrmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategorias.Designer.cs">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmListarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,11 +66,11 @@
     <Compile Include="FrmBienvenida.Designer.cs">
       <DependentUpon>FrmBienvenida.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMarcas.cs">
+    <Compile Include="FrmMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMarcas.Designer.cs">
-      <DependentUpon>frmMarcas.cs</DependentUpon>
+    <Compile Include="FrmMarcas.Designer.cs">
+      <DependentUpon>FrmMarcas.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmModificarArticulo.cs">
       <SubType>Form</SubType>
@@ -91,11 +97,14 @@
     <EmbeddedResource Include="FrmBienvenida.resx">
       <DependentUpon>FrmBienvenida.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategorias.resx">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmListarArticulo.resx">
       <DependentUpon>FrmListarArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMarcas.resx">
-      <DependentUpon>frmMarcas.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMarcas.resx">
+      <DependentUpon>FrmMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModificarArticulo.resx">
       <DependentUpon>FrmModificarArticulo.cs</DependentUpon>

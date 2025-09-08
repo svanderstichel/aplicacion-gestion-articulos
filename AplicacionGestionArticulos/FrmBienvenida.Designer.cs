@@ -95,6 +95,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.linkLabel1);
             this.Name = "FrmBienvenida";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Bienvenida";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

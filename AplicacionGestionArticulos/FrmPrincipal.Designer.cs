@@ -54,7 +54,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(572, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(889, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,7 +64,7 @@
             this.crearToolStripMenuItem,
             this.modificarToolStripMenuItem,
             this.listarToolStripMenuItem});
-            this.articulosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.articulosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.articulosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("articulosToolStripMenuItem.Image")));
             this.articulosToolStripMenuItem.Name = "articulosToolStripMenuItem";
             this.articulosToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
@@ -120,8 +120,9 @@
             // administrarToolStripMenuItem1
             // 
             this.administrarToolStripMenuItem1.Name = "administrarToolStripMenuItem1";
-            this.administrarToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
+            this.administrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.administrarToolStripMenuItem1.Text = "Administrar";
+            this.administrarToolStripMenuItem1.Click += new System.EventHandler(this.administrarToolStripMenuItem1_Click);
             // 
             // acercaToolStripMenuItem
             // 
@@ -144,7 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(572, 336);
+            this.ClientSize = new System.Drawing.Size(889, 410);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsMdiContainer = true;

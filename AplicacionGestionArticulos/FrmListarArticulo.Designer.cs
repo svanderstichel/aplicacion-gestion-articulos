@@ -104,6 +104,7 @@
             this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.dgvListadoArticulos);
             this.Name = "FrmListarArticulo";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Listado de artículos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

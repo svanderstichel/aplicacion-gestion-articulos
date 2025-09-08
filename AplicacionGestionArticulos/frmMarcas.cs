@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AplicacionGestionArticulos
 {
-    public partial class Marcas : Form
+    public partial class FrmMarcas : Form
     {
-        public Marcas()
+        public FrmMarcas()
         {
             InitializeComponent();
         }
@@ -37,11 +37,6 @@ namespace AplicacionGestionArticulos
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
 
@@ -53,6 +48,11 @@ namespace AplicacionGestionArticulos
         }
 
         private void CargaIdMarca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonAceptarCargaMarca_Click(object sender, EventArgs e)
         {
 
         }
