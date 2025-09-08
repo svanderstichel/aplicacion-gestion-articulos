@@ -1,4 +1,4 @@
-﻿namespace AplicacionGestionArticulos
+﻿namespace presentacion
 {
     partial class FrmAltaArticulo
     {
@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        
+
 
 
         #region Windows Form Designer generated code

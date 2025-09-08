@@ -46,8 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Articulo.cs" />
-    <Compile Include="Categoria.cs" />
     <Compile Include="FrmCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,8 +88,6 @@
     <Compile Include="FrmAltaArticulo.Designer.cs">
       <DependentUpon>FrmAltaArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Imagen.cs" />
-    <Compile Include="Marca.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmBienvenida.resx">
@@ -136,6 +132,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dominio\dominio.csproj">
+      <Project>{f94c7c09-176f-48f6-8e39-9cac08df2e5e}</Project>
+      <Name>dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\negocio\negocio.csproj">
+      <Project>{f4d82b1c-3b2b-4bd3-a71e-91b9eee211cb}</Project>
+      <Name>negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

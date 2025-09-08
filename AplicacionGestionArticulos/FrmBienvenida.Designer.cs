@@ -1,4 +1,4 @@
-﻿namespace AplicacionGestionArticulos
+﻿namespace presentacion
 {
     partial class FrmBienvenida
     {
