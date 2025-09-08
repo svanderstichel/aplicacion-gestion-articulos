@@ -31,8 +31,12 @@ namespace AplicacionGestionArticulos
         //verifica que la tabla no exista antes de instanciarla
         foreach (var item in Application.OpenForms)
         {
-            if (item.GetType() == typeof(FrmAltaArticulo))
-                return;
+                if (item.GetType() == typeof(FrmAltaArticulo))
+                {
+                    MessageBox.Show ("Ya existe una ventaba abierta, complete los campos");
+                 return;
+                }
+               
         }
         // Cierro todos las ventanas abiertas
         foreach (Form form in this.MdiChildren)
@@ -51,7 +55,10 @@ namespace AplicacionGestionArticulos
             foreach (var item in Application.OpenForms)
             {
                 if (item.GetType() == typeof(FrmBienvenida))
+                {
+                    MessageBox.Show("Ya existe una ventaba abierta, complete los campos");
                     return;
+                }
             }
             // Cierro todos las ventanas abiertas
             foreach (Form form in this.MdiChildren)
@@ -71,8 +78,11 @@ namespace AplicacionGestionArticulos
                 foreach (var item in Application.OpenForms)
                 {
                     if (item.GetType() == typeof(FrmModificarArticulo))
-                        return;
+                {
+                    MessageBox.Show("Ya existe una ventaba abierta, complete los campos");
+                    return;
                 }
+            }
                 // Cierro todos las ventanas abiertas
                 foreach (Form form in this.MdiChildren)
                 {
@@ -90,7 +100,10 @@ namespace AplicacionGestionArticulos
             foreach (var item in Application.OpenForms)
             {
                 if (item.GetType() == typeof(FrmListarArticulo))
+                {
+                    MessageBox.Show("Ya existe una ventaba abierta, complete los campos");
                     return;
+                }
             }
             // Cierro todos las ventanas abiertas
             foreach (Form form in this.MdiChildren)
@@ -102,6 +115,36 @@ namespace AplicacionGestionArticulos
             frmListarArticulo.MdiParent = this;
             frmListarArticulo.Show();
         }
+
+        private void articulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void administrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //verifica que la tabla no exista antes de instanciarla
+            //foreach (var item in Application.OpenForms)
+            // {
+            // if (item.GetType() == typeof(frmMarcas)) 
+            // {
+            //MessageBox.Show("Ya existe una ventaba abierta, complete los campos");
+            //return;
+        //}
+        //  }
+        // Cierro todos las ventanas abiertas
+        //foreach (Form form in this.MdiChildren)
+        // {
+        // form.Close();
+        //}
+        //instancia ventana de modificar articulo
+        //frmMarcas marca = new frmMarcas();
+        //marca.MdiParent = this;
+        // marca.Show ();
+
+
+
+    }
     }
     }
 

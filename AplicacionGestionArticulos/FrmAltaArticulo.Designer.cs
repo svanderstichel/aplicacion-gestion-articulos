@@ -63,14 +63,14 @@
             // 
             this.txtCodigoProducto.Location = new System.Drawing.Point(130, 40);
             this.txtCodigoProducto.Name = "txtCodigoProducto";
-            this.txtCodigoProducto.Size = new System.Drawing.Size(112, 22);
+            this.txtCodigoProducto.Size = new System.Drawing.Size(112, 19);
             this.txtCodigoProducto.TabIndex = 0;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(402, 40);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(112, 22);
+            this.txtNombre.Size = new System.Drawing.Size(112, 19);
             this.txtNombre.TabIndex = 2;
             // 
             // txtDescripcion
@@ -86,7 +86,7 @@
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Location = new System.Drawing.Point(72, 31);
             this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(136, 24);
+            this.cmbMarca.Size = new System.Drawing.Size(136, 21);
             this.cmbMarca.TabIndex = 4;
             // 
             // cmbCategoria
@@ -94,14 +94,14 @@
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(379, 31);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(136, 24);
+            this.cmbCategoria.Size = new System.Drawing.Size(136, 21);
             this.cmbCategoria.TabIndex = 5;
             // 
             // numPrecio
             // 
             this.numPrecio.Location = new System.Drawing.Point(657, 31);
             this.numPrecio.Name = "numPrecio";
-            this.numPrecio.Size = new System.Drawing.Size(135, 22);
+            this.numPrecio.Size = new System.Drawing.Size(135, 19);
             this.numPrecio.TabIndex = 6;
             // 
             // picImagen
@@ -126,7 +126,7 @@
             this.Guardar.Location = new System.Drawing.Point(485, 397);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(84, 23);
-            this.Guardar.TabIndex = 9;
+            this.Guardar.TabIndex = 3;
             this.Guardar.Text = "Guardar";
             this.Guardar.UseVisualStyleBackColor = true;
             this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
@@ -136,7 +136,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(680, 397);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(84, 23);
-            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -145,7 +145,7 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Location = new System.Drawing.Point(10, 40);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(117, 16);
+            this.lblCodigo.Size = new System.Drawing.Size(97, 13);
             this.lblCodigo.TabIndex = 11;
             this.lblCodigo.Text = "Codigo Articulo:";
             // 
@@ -154,7 +154,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(276, 40);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(122, 16);
+            this.lblNombre.Size = new System.Drawing.Size(101, 13);
             this.lblNombre.TabIndex = 12;
             this.lblNombre.Text = "Nombre Articulo:";
             // 
@@ -163,7 +163,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(567, 43);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(94, 16);
+            this.lblDescripcion.Size = new System.Drawing.Size(78, 13);
             this.lblDescripcion.TabIndex = 13;
             this.lblDescripcion.Text = "Descripcion:";
             // 
@@ -172,7 +172,7 @@
             this.lblMarca.AutoSize = true;
             this.lblMarca.Location = new System.Drawing.Point(11, 31);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(54, 16);
+            this.lblMarca.Size = new System.Drawing.Size(46, 13);
             this.lblMarca.TabIndex = 14;
             this.lblMarca.Text = "Marca:";
             // 
@@ -181,7 +181,7 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Location = new System.Drawing.Point(277, 31);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(79, 16);
+            this.lblCategoria.Size = new System.Drawing.Size(65, 13);
             this.lblCategoria.TabIndex = 15;
             this.lblCategoria.Text = "Categoria:";
             // 
@@ -190,7 +190,7 @@
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Location = new System.Drawing.Point(568, 31);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(56, 16);
+            this.lblPrecio.Size = new System.Drawing.Size(47, 13);
             this.lblPrecio.TabIndex = 16;
             this.lblPrecio.Text = "Precio:";
             // 
@@ -199,7 +199,7 @@
             this.lblImagenCargada.AutoSize = true;
             this.lblImagenCargada.Location = new System.Drawing.Point(91, 80);
             this.lblImagenCargada.Name = "lblImagenCargada";
-            this.lblImagenCargada.Size = new System.Drawing.Size(126, 16);
+            this.lblImagenCargada.Size = new System.Drawing.Size(103, 13);
             this.lblImagenCargada.TabIndex = 17;
             this.lblImagenCargada.Text = "Imagen Cargada:";
             // 
@@ -208,7 +208,7 @@
             this.lblCargarImagen.AutoSize = true;
             this.lblCargarImagen.Location = new System.Drawing.Point(695, 86);
             this.lblCargarImagen.Name = "lblCargarImagen";
-            this.lblCargarImagen.Size = new System.Drawing.Size(0, 16);
+            this.lblCargarImagen.Size = new System.Drawing.Size(0, 13);
             this.lblCargarImagen.TabIndex = 18;
             // 
             // gbDatosArticulo
@@ -222,7 +222,7 @@
             this.gbDatosArticulo.Location = new System.Drawing.Point(55, 34);
             this.gbDatosArticulo.Name = "gbDatosArticulo";
             this.gbDatosArticulo.Size = new System.Drawing.Size(807, 127);
-            this.gbDatosArticulo.TabIndex = 19;
+            this.gbDatosArticulo.TabIndex = 0;
             this.gbDatosArticulo.TabStop = false;
             this.gbDatosArticulo.Text = "Datos Articulo:";
             // 
@@ -237,7 +237,7 @@
             this.gbClasificacion.Location = new System.Drawing.Point(55, 182);
             this.gbClasificacion.Name = "gbClasificacion";
             this.gbClasificacion.Size = new System.Drawing.Size(807, 71);
-            this.gbClasificacion.TabIndex = 20;
+            this.gbClasificacion.TabIndex = 1;
             this.gbClasificacion.TabStop = false;
             this.gbClasificacion.Text = "Clasificacion Articulo";
             // 
@@ -250,16 +250,16 @@
             this.gbImagenes.Location = new System.Drawing.Point(55, 324);
             this.gbImagenes.Name = "gbImagenes";
             this.gbImagenes.Size = new System.Drawing.Size(335, 314);
-            this.gbImagenes.TabIndex = 21;
+            this.gbImagenes.TabIndex = 2;
             this.gbImagenes.TabStop = false;
             this.gbImagenes.Text = "Imagenes";
             // 
             // FrmAltaArticulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1381, 796);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.gbImagenes);
             this.Controls.Add(this.gbClasificacion);
             this.Controls.Add(this.Guardar);

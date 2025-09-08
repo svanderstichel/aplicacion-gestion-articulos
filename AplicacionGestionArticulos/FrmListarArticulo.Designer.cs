@@ -51,7 +51,7 @@
             this.cmbCategoria.Location = new System.Drawing.Point(12, 50);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cmbCategoria.TabIndex = 1;
+            this.cmbCategoria.TabIndex = 0;
             this.cmbCategoria.Text = "Categoría";
             // 
             // cmbMarca
@@ -60,7 +60,7 @@
             this.cmbMarca.Location = new System.Drawing.Point(139, 50);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(121, 21);
-            this.cmbMarca.TabIndex = 2;
+            this.cmbMarca.TabIndex = 1;
             this.cmbMarca.Text = "Marca";
             // 
             // btnEliminar
@@ -87,7 +87,7 @@
             this.button1.Location = new System.Drawing.Point(12, 396);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 36);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Ver detalle";
             this.button1.UseVisualStyleBackColor = true;
             // 

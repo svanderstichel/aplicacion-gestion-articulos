@@ -17,6 +17,9 @@ namespace AplicacionGestionArticulos
             InitializeComponent();
         }
 
+        private void FrmModificarArticulo_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

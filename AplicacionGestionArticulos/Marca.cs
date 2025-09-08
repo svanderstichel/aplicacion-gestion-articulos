@@ -10,5 +10,9 @@ namespace AplicacionGestionArticulos
     {
         public int IdMarca {  get; set; }
         public string Nombre { get; set; }
+
+        // agregue el usuario para que se pueda saber quien cargo el dato
+        public string UsuarioCarga { get; }    
+
     }
 }
