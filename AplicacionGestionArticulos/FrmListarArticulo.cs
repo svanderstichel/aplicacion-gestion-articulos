@@ -16,5 +16,11 @@ namespace presentacion
         {
             InitializeComponent();
         }
+
+        private void btnAgregarArticuloDesdeLista_Click(object sender, EventArgs e)
+        {
+            FrmAltaArticulo alta = new FrmAltaArticulo();
+            alta.ShowDialog();
+        }
     }
 }

@@ -249,6 +249,7 @@
             this.btnCancelarModificar.TabIndex = 4;
             this.btnCancelarModificar.Text = "Cancelar";
             this.btnCancelarModificar.UseVisualStyleBackColor = true;
+            this.btnCancelarModificar.Click += new System.EventHandler(this.btnCancelarModificar_Click);
             // 
             // FrmModificarArticulo
             // 

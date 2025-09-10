@@ -34,6 +34,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblListadoArticulos = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarArticuloDesdeLista = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoArticulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,12 +92,25 @@
             this.button1.Text = "Ver detalle";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // btnAgregarArticuloDesdeLista
+            // 
+            this.btnAgregarArticuloDesdeLista.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAgregarArticuloDesdeLista.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAgregarArticuloDesdeLista.Location = new System.Drawing.Point(685, 50);
+            this.btnAgregarArticuloDesdeLista.Name = "btnAgregarArticuloDesdeLista";
+            this.btnAgregarArticuloDesdeLista.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarArticuloDesdeLista.TabIndex = 5;
+            this.btnAgregarArticuloDesdeLista.Text = "Agregar Articulo";
+            this.btnAgregarArticuloDesdeLista.UseVisualStyleBackColor = true;
+            this.btnAgregarArticuloDesdeLista.Click += new System.EventHandler(this.btnAgregarArticuloDesdeLista_Click);
+            // 
             // FrmListarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAgregarArticuloDesdeLista);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblListadoArticulos);
             this.Controls.Add(this.btnEliminar);
@@ -122,5 +136,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblListadoArticulos;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregarArticuloDesdeLista;
     }
 }

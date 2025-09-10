@@ -32,15 +32,15 @@
         private void InitializeComponent()
         {
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtNombreArtículo = new System.Windows.Forms.TextBox();
+            this.txtDescripcionArtículo = new System.Windows.Forms.TextBox();
             this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.numPrecio = new System.Windows.Forms.NumericUpDown();
-            this.picImagen = new System.Windows.Forms.PictureBox();
-            this.btnCargarImagen = new System.Windows.Forms.Button();
-            this.Guardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.picImagenArticulo = new System.Windows.Forms.PictureBox();
+            this.btnCargarImagenArticulo = new System.Windows.Forms.Button();
+            this.GuardarImagen = new System.Windows.Forms.Button();
+            this.btnCancelarImagenArticulo = new System.Windows.Forms.Button();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.gbClasificacion = new System.Windows.Forms.GroupBox();
             this.gbImagenes = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagenArticulo)).BeginInit();
             this.gbDatosArticulo.SuspendLayout();
             this.gbClasificacion.SuspendLayout();
             this.gbImagenes.SuspendLayout();
@@ -65,21 +65,22 @@
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.Size = new System.Drawing.Size(112, 19);
             this.txtCodigoProducto.TabIndex = 0;
+            this.txtCodigoProducto.TextChanged += new System.EventHandler(this.txtCodigoProducto_TextChanged);
             // 
-            // txtNombre
+            // txtNombreArtículo
             // 
-            this.txtNombre.Location = new System.Drawing.Point(402, 40);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(112, 19);
-            this.txtNombre.TabIndex = 2;
+            this.txtNombreArtículo.Location = new System.Drawing.Point(402, 40);
+            this.txtNombreArtículo.Name = "txtNombreArtículo";
+            this.txtNombreArtículo.Size = new System.Drawing.Size(112, 19);
+            this.txtNombreArtículo.TabIndex = 2;
             // 
-            // txtDescripcion
+            // txtDescripcionArtículo
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(659, 40);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(132, 22);
-            this.txtDescripcion.TabIndex = 3;
+            this.txtDescripcionArtículo.Location = new System.Drawing.Point(659, 40);
+            this.txtDescripcionArtículo.Multiline = true;
+            this.txtDescripcionArtículo.Name = "txtDescripcionArtículo";
+            this.txtDescripcionArtículo.Size = new System.Drawing.Size(132, 22);
+            this.txtDescripcionArtículo.TabIndex = 3;
             // 
             // cmbMarca
             // 
@@ -104,41 +105,42 @@
             this.numPrecio.Size = new System.Drawing.Size(135, 19);
             this.numPrecio.TabIndex = 6;
             // 
-            // picImagen
+            // picImagenArticulo
             // 
-            this.picImagen.Location = new System.Drawing.Point(14, 112);
-            this.picImagen.Name = "picImagen";
-            this.picImagen.Size = new System.Drawing.Size(307, 173);
-            this.picImagen.TabIndex = 7;
-            this.picImagen.TabStop = false;
+            this.picImagenArticulo.Location = new System.Drawing.Point(14, 112);
+            this.picImagenArticulo.Name = "picImagenArticulo";
+            this.picImagenArticulo.Size = new System.Drawing.Size(307, 173);
+            this.picImagenArticulo.TabIndex = 7;
+            this.picImagenArticulo.TabStop = false;
             // 
-            // btnCargarImagen
+            // btnCargarImagenArticulo
             // 
-            this.btnCargarImagen.Location = new System.Drawing.Point(71, 32);
-            this.btnCargarImagen.Name = "btnCargarImagen";
-            this.btnCargarImagen.Size = new System.Drawing.Size(172, 23);
-            this.btnCargarImagen.TabIndex = 8;
-            this.btnCargarImagen.Text = "Seleccionar Imagen";
-            this.btnCargarImagen.UseVisualStyleBackColor = true;
+            this.btnCargarImagenArticulo.Location = new System.Drawing.Point(71, 32);
+            this.btnCargarImagenArticulo.Name = "btnCargarImagenArticulo";
+            this.btnCargarImagenArticulo.Size = new System.Drawing.Size(172, 23);
+            this.btnCargarImagenArticulo.TabIndex = 8;
+            this.btnCargarImagenArticulo.Text = "Seleccionar Imagen";
+            this.btnCargarImagenArticulo.UseVisualStyleBackColor = true;
             // 
-            // Guardar
+            // GuardarImagen
             // 
-            this.Guardar.Location = new System.Drawing.Point(485, 397);
-            this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(84, 23);
-            this.Guardar.TabIndex = 3;
-            this.Guardar.Text = "Guardar";
-            this.Guardar.UseVisualStyleBackColor = true;
-            this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
+            this.GuardarImagen.Location = new System.Drawing.Point(485, 397);
+            this.GuardarImagen.Name = "GuardarImagen";
+            this.GuardarImagen.Size = new System.Drawing.Size(84, 23);
+            this.GuardarImagen.TabIndex = 3;
+            this.GuardarImagen.Text = "Guardar";
+            this.GuardarImagen.UseVisualStyleBackColor = true;
+            this.GuardarImagen.Click += new System.EventHandler(this.Guardar_Click);
             // 
-            // btnCancelar
+            // btnCancelarImagenArticulo
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(680, 397);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(84, 23);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelarImagenArticulo.Location = new System.Drawing.Point(680, 397);
+            this.btnCancelarImagenArticulo.Name = "btnCancelarImagenArticulo";
+            this.btnCancelarImagenArticulo.Size = new System.Drawing.Size(84, 23);
+            this.btnCancelarImagenArticulo.TabIndex = 4;
+            this.btnCancelarImagenArticulo.Text = "Cancelar";
+            this.btnCancelarImagenArticulo.UseVisualStyleBackColor = true;
+            this.btnCancelarImagenArticulo.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblCodigo
             // 
@@ -188,11 +190,11 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(568, 31);
+            this.lblPrecio.Location = new System.Drawing.Point(542, 34);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(47, 13);
+            this.lblPrecio.Size = new System.Drawing.Size(103, 13);
             this.lblPrecio.TabIndex = 16;
-            this.lblPrecio.Text = "Precio:";
+            this.lblPrecio.Text = "Precio en Pesos:";
             // 
             // lblImagenCargada
             // 
@@ -213,9 +215,9 @@
             // 
             // gbDatosArticulo
             // 
-            this.gbDatosArticulo.Controls.Add(this.txtNombre);
+            this.gbDatosArticulo.Controls.Add(this.txtNombreArtículo);
             this.gbDatosArticulo.Controls.Add(this.txtCodigoProducto);
-            this.gbDatosArticulo.Controls.Add(this.txtDescripcion);
+            this.gbDatosArticulo.Controls.Add(this.txtDescripcionArtículo);
             this.gbDatosArticulo.Controls.Add(this.lblCodigo);
             this.gbDatosArticulo.Controls.Add(this.lblNombre);
             this.gbDatosArticulo.Controls.Add(this.lblDescripcion);
@@ -224,7 +226,7 @@
             this.gbDatosArticulo.Size = new System.Drawing.Size(807, 127);
             this.gbDatosArticulo.TabIndex = 0;
             this.gbDatosArticulo.TabStop = false;
-            this.gbDatosArticulo.Text = "Datos Articulo:";
+            this.gbDatosArticulo.Text = "Datos Articulo";
             // 
             // gbClasificacion
             // 
@@ -243,8 +245,8 @@
             // 
             // gbImagenes
             // 
-            this.gbImagenes.Controls.Add(this.btnCargarImagen);
-            this.gbImagenes.Controls.Add(this.picImagen);
+            this.gbImagenes.Controls.Add(this.btnCargarImagenArticulo);
+            this.gbImagenes.Controls.Add(this.picImagenArticulo);
             this.gbImagenes.Controls.Add(this.lblCargarImagen);
             this.gbImagenes.Controls.Add(this.lblImagenCargada);
             this.gbImagenes.Location = new System.Drawing.Point(55, 324);
@@ -252,7 +254,7 @@
             this.gbImagenes.Size = new System.Drawing.Size(335, 314);
             this.gbImagenes.TabIndex = 2;
             this.gbImagenes.TabStop = false;
-            this.gbImagenes.Text = "Imagenes";
+            this.gbImagenes.Text = "Imagenes del Artículo";
             // 
             // FrmAltaArticulo
             // 
@@ -262,8 +264,8 @@
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.gbImagenes);
             this.Controls.Add(this.gbClasificacion);
-            this.Controls.Add(this.Guardar);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.GuardarImagen);
+            this.Controls.Add(this.btnCancelarImagenArticulo);
             this.Controls.Add(this.gbDatosArticulo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MinimizeBox = false;
@@ -273,7 +275,7 @@
             this.Text = "Crear nuevo artículo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picImagenArticulo)).EndInit();
             this.gbDatosArticulo.ResumeLayout(false);
             this.gbDatosArticulo.PerformLayout();
             this.gbClasificacion.ResumeLayout(false);
@@ -287,15 +289,15 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtCodigoProducto;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtNombreArtículo;
+        private System.Windows.Forms.TextBox txtDescripcionArtículo;
         private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.NumericUpDown numPrecio;
-        private System.Windows.Forms.PictureBox picImagen;
-        private System.Windows.Forms.Button btnCargarImagen;
-        private System.Windows.Forms.Button Guardar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.PictureBox picImagenArticulo;
+        private System.Windows.Forms.Button btnCargarImagenArticulo;
+        private System.Windows.Forms.Button GuardarImagen;
+        private System.Windows.Forms.Button btnCancelarImagenArticulo;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblDescripcion;

@@ -21,5 +21,12 @@ namespace presentacion
         {
 
         }
+
+        private void btnCancelarModificar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmPrincipal volver = new FrmPrincipal();
+            volver.ShowDialog();
+        }
     }
 }
