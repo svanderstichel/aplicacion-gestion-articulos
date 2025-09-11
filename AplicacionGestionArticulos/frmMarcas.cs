@@ -63,11 +63,26 @@ namespace presentacion
 
         }
 
-        private void BotonCargaMarca_Click(object sender, EventArgs e)
+        private void BotonAceptarCargaMarca_Click(object sender, EventArgs e)
         {
-            string nombre = txtCargarNombreMarca.Text;
+            Marca marca = new Marca();
+            MarcaNegocio negocio = new MarcaNegocio();
+
+            try
+            {
+                marca.Nombre = txtCargarNombreMarca.Text;
+
+                negocio.Agregar(marca);
+                MessageBox.Show("Agregado existosamente!");
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
 
           
         }
+
     }
 }

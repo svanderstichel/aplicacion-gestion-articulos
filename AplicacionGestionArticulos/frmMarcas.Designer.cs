@@ -56,7 +56,7 @@
             // txtCargarNombreMarca
             // 
             this.txtCargarNombreMarca.Location = new System.Drawing.Point(159, 22);
-            this.txtCargarNombreMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCargarNombreMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtCargarNombreMarca.Name = "txtCargarNombreMarca";
             this.txtCargarNombreMarca.Size = new System.Drawing.Size(240, 22);
             this.txtCargarNombreMarca.TabIndex = 1;
@@ -71,12 +71,13 @@
             this.BotonAceptarCargaMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonAceptarCargaMarca.ForeColor = System.Drawing.SystemColors.Control;
             this.BotonAceptarCargaMarca.Location = new System.Drawing.Point(408, 15);
-            this.BotonAceptarCargaMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BotonAceptarCargaMarca.Margin = new System.Windows.Forms.Padding(4);
             this.BotonAceptarCargaMarca.Name = "BotonAceptarCargaMarca";
             this.BotonAceptarCargaMarca.Size = new System.Drawing.Size(273, 36);
             this.BotonAceptarCargaMarca.TabIndex = 1;
             this.BotonAceptarCargaMarca.Text = "&Cargar nueva marca";
             this.BotonAceptarCargaMarca.UseVisualStyleBackColor = false;
+            this.BotonAceptarCargaMarca.Click += new System.EventHandler(this.BotonAceptarCargaMarca_Click);
             // 
             // BotonCancelarCargaMarca
             // 
@@ -87,7 +88,7 @@
             this.BotonCancelarCargaMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonCancelarCargaMarca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BotonCancelarCargaMarca.Location = new System.Drawing.Point(721, 494);
-            this.BotonCancelarCargaMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BotonCancelarCargaMarca.Margin = new System.Windows.Forms.Padding(4);
             this.BotonCancelarCargaMarca.Name = "BotonCancelarCargaMarca";
             this.BotonCancelarCargaMarca.Size = new System.Drawing.Size(129, 46);
             this.BotonCancelarCargaMarca.TabIndex = 2;
@@ -103,7 +104,7 @@
             this.BotonLimpiarDatosCargaMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonLimpiarDatosCargaMarca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BotonLimpiarDatosCargaMarca.Location = new System.Drawing.Point(859, 494);
-            this.BotonLimpiarDatosCargaMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BotonLimpiarDatosCargaMarca.Margin = new System.Windows.Forms.Padding(4);
             this.BotonLimpiarDatosCargaMarca.Name = "BotonLimpiarDatosCargaMarca";
             this.BotonLimpiarDatosCargaMarca.Size = new System.Drawing.Size(196, 46);
             this.BotonLimpiarDatosCargaMarca.TabIndex = 3;
@@ -115,9 +116,9 @@
             // 
             this.groupBox1.Controls.Add(this.dgvMarcas);
             this.groupBox1.Location = new System.Drawing.Point(36, 76);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(932, 386);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -127,7 +128,7 @@
             // 
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarcas.Location = new System.Drawing.Point(20, 37);
-            this.dgvMarcas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMarcas.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.RowHeadersWidth = 51;
             this.dgvMarcas.Size = new System.Drawing.Size(904, 342);
@@ -145,7 +146,7 @@
             this.Controls.Add(this.BotonLimpiarDatosCargaMarca);
             this.Controls.Add(this.BotonCancelarCargaMarca);
             this.Controls.Add(this.BotonAceptarCargaMarca);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMarcas";
             this.ShowIcon = false;
             this.Text = "Administrar marcas";

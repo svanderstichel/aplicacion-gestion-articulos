@@ -10,60 +10,53 @@ namespace negocio
 {
     public class MarcaNegocio
     {
-        private string connectionString = "server=localhost\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
-
         public List<Marca> Listar()
         {
             List<Marca> lista = new List<Marca>();
-            SqlConnection conexion =new SqlConnection();
-            SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
-
+            AccesoDatosMarca datos = new AccesoDatosMarca();
             try
-            { 
-                conexion.ConnectionString = connectionString;
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT Id, Descripcion FROM Marcas ORDER BY Descripcion";
-                comando.Connection = conexion;
+            {
+                datos.setearConsulta("SELECT Id, Descripcion FROM MARCAS ORDER BY Descripcion");
+                datos.ejecutarLectura();
 
-                //open connection
-                conexion.Open();
-                lector = comando.ExecuteReader();
-
-                while (lector.Read()) {
-                    //creo una marca por cada fila
+                while (datos.Lector.Read()) {
+ 
                     Marca aux = new Marca();
-                    aux.IdMarca = lector.GetInt32(0);
-                    aux.Nombre = (string)lector["Descripcion"];
+                    aux.IdMarca = (int)datos.Lector["Id"];
+                    aux.Nombre = (string)datos.Lector["Descripcion"];
 
                     lista.Add(aux);
                 }
-                conexion.Close();
                 return lista;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+            finally
+            {
+                datos.cerrarConexion();
+            }
             
         }
-        public void Agregar(string nombre)
+        public void Agregar(Marca nueva)
         {
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando = new SqlCommand();
+            AccesoDatosMarca datos = new AccesoDatosMarca();
 
             try
             {
-                //conexion, tipo de comando, consulta
-                conexion.ConnectionString = connectionString;
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "INSERT INTO MARCAS (Descripcion) VALUES ";
-
+                datos.setearConsulta("INSERT INTO MARCAS (Descripcion)values(@Nombre)");
+                datos.setearParametros("@Nombre", nueva.Nombre);
+                datos.ejecutarAccion();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
 
         }
