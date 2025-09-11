@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
+using negocio;
 
 namespace presentacion
 {
     public partial class FrmMarcas : Form
     {
+        private List<Marca> listaMarcas;
         public FrmMarcas()
         {
             InitializeComponent();
@@ -19,6 +23,13 @@ namespace presentacion
 
         private void frmMarcas_Load(object sender, EventArgs e)
         {
+            MarcaNegocio negocio = new MarcaNegocio();
+            //me traigo los datos desde la db
+            listaMarcas = negocio.Listar();
+
+            //los guardo en el data grid
+            dgvMarcas.DataSource = listaMarcas;
+            
 
         }
 
@@ -52,9 +63,11 @@ namespace presentacion
 
         }
 
-        private void BotonAceptarCargaMarca_Click(object sender, EventArgs e)
+        private void BotonCargaMarca_Click(object sender, EventArgs e)
         {
+            string nombre = txtCargarNombreMarca.Text;
 
+          
         }
     }
 }
