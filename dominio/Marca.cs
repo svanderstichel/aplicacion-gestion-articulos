@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,8 +8,10 @@ using System.Threading.Tasks;
 namespace dominio
 {
     public class Marca
-    {
+    {    
         public int IdMarca {  get; set; }
+
+        [DisplayName("Marca")]
         public string Nombre { get; set; }
 
         public override string ToString() // sobreescribo el metodo to string para que de las properti del obejto categoria me muestre el nombre

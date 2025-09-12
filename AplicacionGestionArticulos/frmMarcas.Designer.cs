@@ -51,7 +51,6 @@
             this.lblNombreMarca.Size = new System.Drawing.Size(108, 17);
             this.lblNombreMarca.TabIndex = 0;
             this.lblNombreMarca.Text = "Nueva marca:";
-            this.lblNombreMarca.Click += new System.EventHandler(this.Nombre_Click);
             // 
             // txtCargarNombreMarca
             // 
@@ -60,7 +59,6 @@
             this.txtCargarNombreMarca.Name = "txtCargarNombreMarca";
             this.txtCargarNombreMarca.Size = new System.Drawing.Size(240, 22);
             this.txtCargarNombreMarca.TabIndex = 1;
-            this.txtCargarNombreMarca.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // BotonAceptarCargaMarca
             // 
@@ -87,13 +85,14 @@
             this.BotonCancelarCargaMarca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.BotonCancelarCargaMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonCancelarCargaMarca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BotonCancelarCargaMarca.Location = new System.Drawing.Point(721, 494);
+            this.BotonCancelarCargaMarca.Location = new System.Drawing.Point(473, 237);
             this.BotonCancelarCargaMarca.Margin = new System.Windows.Forms.Padding(4);
             this.BotonCancelarCargaMarca.Name = "BotonCancelarCargaMarca";
             this.BotonCancelarCargaMarca.Size = new System.Drawing.Size(129, 46);
             this.BotonCancelarCargaMarca.TabIndex = 2;
             this.BotonCancelarCargaMarca.Text = "&Cancelar";
             this.BotonCancelarCargaMarca.UseVisualStyleBackColor = false;
+            this.BotonCancelarCargaMarca.Click += new System.EventHandler(this.BotonCancelarCargaMarca_Click);
             // 
             // BotonLimpiarDatosCargaMarca
             // 
@@ -103,23 +102,23 @@
             this.BotonLimpiarDatosCargaMarca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.BotonLimpiarDatosCargaMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonLimpiarDatosCargaMarca.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BotonLimpiarDatosCargaMarca.Location = new System.Drawing.Point(859, 494);
+            this.BotonLimpiarDatosCargaMarca.Location = new System.Drawing.Point(611, 237);
             this.BotonLimpiarDatosCargaMarca.Margin = new System.Windows.Forms.Padding(4);
             this.BotonLimpiarDatosCargaMarca.Name = "BotonLimpiarDatosCargaMarca";
             this.BotonLimpiarDatosCargaMarca.Size = new System.Drawing.Size(196, 46);
             this.BotonLimpiarDatosCargaMarca.TabIndex = 3;
             this.BotonLimpiarDatosCargaMarca.Text = "&Eliminar marca";
             this.BotonLimpiarDatosCargaMarca.UseVisualStyleBackColor = false;
-            this.BotonLimpiarDatosCargaMarca.Click += new System.EventHandler(this.button3_Click);
+            this.BotonLimpiarDatosCargaMarca.Click += new System.EventHandler(this.BotonLimpiarDatosCargaMarca_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvMarcas);
-            this.groupBox1.Location = new System.Drawing.Point(36, 76);
+            this.groupBox1.Location = new System.Drawing.Point(36, 74);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(932, 386);
+            this.groupBox1.Size = new System.Drawing.Size(363, 388);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado de marcas";
@@ -127,11 +126,14 @@
             // dgvMarcas
             // 
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarcas.Location = new System.Drawing.Point(20, 37);
+            this.dgvMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvMarcas.Location = new System.Drawing.Point(26, 23);
             this.dgvMarcas.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvMarcas.MultiSelect = false;
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.RowHeadersWidth = 51;
-            this.dgvMarcas.Size = new System.Drawing.Size(904, 342);
+            this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMarcas.Size = new System.Drawing.Size(305, 342);
             this.dgvMarcas.TabIndex = 0;
             // 
             // FrmMarcas

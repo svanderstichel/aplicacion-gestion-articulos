@@ -23,45 +23,18 @@ namespace presentacion
 
         private void frmMarcas_Load(object sender, EventArgs e)
         {
+            cargar();
+        }
+        private void cargar()
+        {
             MarcaNegocio negocio = new MarcaNegocio();
             //me traigo los datos desde la db
             listaMarcas = negocio.Listar();
-
             //los guardo en el data grid
             dgvMarcas.DataSource = listaMarcas;
-            
-
+            dgvMarcas.Columns["IdMarca"].Visible =false;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Nombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripTextBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CargaIdMarca_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void BotonAceptarCargaMarca_Click(object sender, EventArgs e)
         {
@@ -73,8 +46,9 @@ namespace presentacion
                 marca.Nombre = txtCargarNombreMarca.Text;
 
                 negocio.Agregar(marca);
+                cargar();
                 MessageBox.Show("Agregado existosamente!");
-                Close();
+             
             }
             catch (Exception ex)
             {
@@ -84,5 +58,31 @@ namespace presentacion
           
         }
 
+        private void BotonLimpiarDatosCargaMarca_Click(object sender, EventArgs e)
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            Marca seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Estas seguro que queres eliminar?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                    negocio.Eliminar(seleccionado.IdMarca);
+                    cargar();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void BotonCancelarCargaMarca_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
