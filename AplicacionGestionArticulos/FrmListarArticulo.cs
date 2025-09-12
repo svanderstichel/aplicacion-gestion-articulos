@@ -1,4 +1,5 @@
-﻿using System;
+﻿using negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,12 @@ namespace presentacion
         {
             FrmAltaArticulo alta = new FrmAltaArticulo();
             alta.ShowDialog();
+        }
+
+        private void FrmListarArticulo_Load(object sender, EventArgs e)
+        {
+            ListarArticuloNegocio negocio = new ListarArticuloNegocio();
+            dgvListadoArticulos.DataSource = negocio.ListarArticulos();
         }
     }
 }

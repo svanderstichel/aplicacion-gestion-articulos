@@ -122,6 +122,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Listado de artículos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmListarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
