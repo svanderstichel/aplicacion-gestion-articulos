@@ -21,7 +21,7 @@ namespace negocio
             {
                 conexion.ConnectionString = "server=localhost\\SQLEXPRESS;database=CATALOGO_P3_DB;integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT A.Id as Codigo, \r\nA.Nombre, \r\nA.Descripcion, \r\nM.Descripcion AS Marca, \r\nC.Descripcion AS Categoria, \r\nA.Precio,\r\nI.ImagenUrl AS Imagen\r\nFROM ARTICULOS A\r\nLEFT JOIN MARCAS M ON A.IdMarca = M.Id\r\nLEFT JOIN CATEGORIAS C ON A.idCategoria = C.Id\r\nLEFT JOIN IMAGENES I ON A.id = I.IdArticulo;";
+                comando.CommandText = "SELECT A.Codigo as Codigo, \r\nA.Nombre, \r\nA.Descripcion, \r\nM.Descripcion AS Marca, \r\nC.Descripcion AS Categoria, \r\nA.Precio,\r\nI.ImagenUrl AS Imagen\r\nFROM ARTICULOS A\r\nLEFT JOIN MARCAS M ON A.IdMarca = M.Id\r\nLEFT JOIN CATEGORIAS C ON A.idCategoria = C.Id\r\nLEFT JOIN IMAGENES I ON A.id = I.IdArticulo;";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -30,14 +30,14 @@ namespace negocio
                 while (lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.CodigoArticulo = (string)lector["Codigo"]; // lo cambie a string pues asi està en la BD
-                    aux.Nombre = (string)lector["Nombre"];
-                    aux.Descripcion = (string)lector["Descripcion"];
+                    aux.CodigoArticulo = Convert.ToString(lector["Codigo"]); // lo cambie a string pues asi està en la BD
+                    aux.Nombre = Convert.ToString(lector["Nombre"]);
+                    aux.Descripcion = Convert.ToString(lector["Descripcion"]);
                     aux.Marca = new Marca();
                     aux.Marca.Nombre = Convert.ToString(lector["Marca"]);
                     aux.Categoria = new Categoria();
                     aux.Categoria.Nombre = Convert.ToString(lector["Categoria"]);
-                    aux.Precio = (decimal)lector["Precio"];
+                    aux.Precio = Convert.ToDecimal(lector["Precio"]);
                     /*aux.ListaImagenes = new List<Imagen>();
                     aux.ListaImagenes.Add((Imagen)lector["Imagen"]);*/
 
