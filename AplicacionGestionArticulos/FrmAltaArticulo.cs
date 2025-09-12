@@ -30,9 +30,11 @@ namespace presentacion
 
             try
             {
-                articulo.CodigoArticulo = int.Parse(txtCodigoProducto.Text);
+                articulo.CodigoArticulo = txtCodigoProducto.Text; // saque el casteo a int pues ahora es string en la clase
                 articulo.Nombre = txtNombreArtículo.Text;
                 articulo.Descripcion = txtDescripcionArtículo.Text;
+                articulo.Marca = (Marca)cmbMarca.SelectedItem;
+                //articulo.Categoria = (Categoria)cmbCategoria.SelectedItem;
 
                 alta.agregar(articulo);
                 MessageBox.Show("Artículo agregado exitosamente!");
@@ -59,6 +61,43 @@ namespace presentacion
             this.Close();
             FrmPrincipal volver = new FrmPrincipal  ();
             volver.ShowDialog();
+        }
+
+        private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*MarcaNegocio marca = new MarcaNegocio();
+            try
+            {
+                cmbMarca.DataSource = marca.Listar();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }*/
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmAltaArticulo_Load(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void gbClasificacion_Enter(object sender, EventArgs e)
+        {
+            
         }
     }
 }

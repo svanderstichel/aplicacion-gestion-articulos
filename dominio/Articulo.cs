@@ -10,7 +10,8 @@ namespace dominio
 {
     public class Articulo
     {
-        public int CodigoArticulo { get; set; }
+        //public int CodigoArticulo { get; set; } en la BD està como Varchar. 
+        public string CodigoArticulo { get; set; } // Por eso lo agrego como string aqui
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public Marca Marca { get; set; }

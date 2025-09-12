@@ -84,19 +84,23 @@
             // 
             // cmbMarca
             // 
+            this.cmbMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMarca.FormattingEnabled = true;
             this.cmbMarca.Location = new System.Drawing.Point(72, 31);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(136, 21);
             this.cmbMarca.TabIndex = 4;
+            this.cmbMarca.SelectedIndexChanged += new System.EventHandler(this.cmbMarca_SelectedIndexChanged);
             // 
             // cmbCategoria
             // 
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(379, 31);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(136, 21);
             this.cmbCategoria.TabIndex = 5;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
             // numPrecio
             // 
@@ -242,6 +246,7 @@
             this.gbClasificacion.TabIndex = 1;
             this.gbClasificacion.TabStop = false;
             this.gbClasificacion.Text = "Clasificacion Articulo";
+            this.gbClasificacion.Enter += new System.EventHandler(this.gbClasificacion_Enter);
             // 
             // gbImagenes
             // 
@@ -261,7 +266,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1364, 749);
             this.Controls.Add(this.gbImagenes);
             this.Controls.Add(this.gbClasificacion);
             this.Controls.Add(this.GuardarImagen);
@@ -274,6 +279,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear nuevo artículo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmAltaArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenArticulo)).EndInit();
             this.gbDatosArticulo.ResumeLayout(false);

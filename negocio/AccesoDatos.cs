@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+using dominio;
+
+namespace negocio
+{
+    public class AccesoDatos
+    {
+        private SqlConnection conexion;// Conector con la BD
+        private SqlCommand comando; // me permite hacer Acciones luego de conectarme
+        private SqlDataReader lector;// Guardo el set de datos que tomo de la BD
+
+        // mètodo para realizar la conexion a la BD
+        public AccesoDatos()
+        {
+            conexion = new SqlConnection("server=localhost\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true");
+            comando = new SqlCommand();
+        }
+        // mètodo para realizar la consulta a la BD
+        public void setearConsulta(string consulta)
+        {
+            comando.CommandType = System.Data.CommandType.Text; // Sentencia de SQL  que voy a usar
+            comando.CommandText = consulta; // le mando el texto con el formato de la consulta sql
+        }
+        // mètodo para leer la consulta
+        public void ejercutarLectura()
+        {
+            comando.Connection = conexion;// ejecuta el comando de la consulta
+
+            try
+            {
+                conexion.Open(); // abre la conexion
+                lector = comando.ExecuteReader();// realiza la lectua de datos de la BD y los guardo en "LECTOR"
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+        //mètodo para ejecur el insert en la tabla de la BD
+
+        public void ejecutarAccion()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                comando.ExecuteNonQuery();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        public void cerrarConexion()
+        {
+            if (lector != null)
+                lector.Close(); 
+                conexion.Close();
+        
+        }
+
+    }
+        
+}

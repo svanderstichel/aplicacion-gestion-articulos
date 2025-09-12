@@ -11,7 +11,7 @@ namespace dominio
         public int IdMarca {  get; set; }
         public string Nombre { get; set; }
 
-        public override string ToString()
+        public override string ToString() // sobreescribo el metodo to string para que de las properti del obejto categoria me muestre el nombre
         {
             return Nombre;
         }

@@ -8,9 +8,9 @@ namespace negocio
 {
     public class AccesoDatosMarca
     {
-        private SqlConnection conexion;
-        private SqlCommand comando;
-        private SqlDataReader lector;
+        private SqlConnection conexion; 
+        private SqlCommand comando; 
+        private SqlDataReader lector; 
 
         public SqlDataReader Lector
         {

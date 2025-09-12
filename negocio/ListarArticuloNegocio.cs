@@ -30,7 +30,7 @@ namespace negocio
                 while (lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.CodigoArticulo = (int)lector["Codigo"];
+                    aux.CodigoArticulo = (string)lector["Codigo"]; // lo cambie a string pues asi està en la BD
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.Marca = new Marca();
