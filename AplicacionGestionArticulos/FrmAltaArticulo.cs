@@ -34,7 +34,8 @@ namespace presentacion
                 articulo.Nombre = txtNombreArtículo.Text;
                 articulo.Descripcion = txtDescripcionArtículo.Text;
                 articulo.Marca = (Marca)cmbMarca.SelectedItem;
-                //articulo.Categoria = (Categoria)cmbCategoria.SelectedItem;
+                articulo.Categoria = (Categoria)cmbCategoria.SelectedItem;
+                //articulo.Precio= 
 
                 alta.agregar(articulo);
                 MessageBox.Show("Artículo agregado exitosamente!");
@@ -65,18 +66,7 @@ namespace presentacion
 
         private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*MarcaNegocio marca = new MarcaNegocio();
-            try
-            {
-                cmbMarca.DataSource = marca.Listar();
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }*/
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -91,9 +81,38 @@ namespace presentacion
 
         private void FrmAltaArticulo_Load(object sender, EventArgs e)
         {
+            MarcaNegocio marca = new MarcaNegocio();
+            try
+            {
+                cmbMarca.DataSource = marca.Listar();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+            CategoriaNegocio categoria = new CategoriaNegocio();
+                try
+                {
+                    cmbCategoria.DataSource = categoria.Listar();
            
 
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.ToString());
+                }
         }
+
+        
+
+
+        
 
         private void gbClasificacion_Enter(object sender, EventArgs e)
         {

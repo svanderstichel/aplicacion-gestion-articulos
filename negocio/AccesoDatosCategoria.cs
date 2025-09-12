@@ -6,18 +6,18 @@ using System.Text;
 using System.Threading.Tasks;
 namespace negocio
 {
-    public class AccesoDatosMarca
+    public class AccesoDatosCategoria
     {
-        private SqlConnection conexion; 
-        private SqlCommand comando; 
-        private SqlDataReader lector; 
+        private SqlConnection conexion;
+        private SqlCommand comando;
+        private SqlDataReader lector;
 
         public SqlDataReader Lector
         {
             get { return lector; }
         }
 
-        public AccesoDatosMarca()
+        public AccesoDatosCategoria()
         {
             //conexion = new SqlConnection("server=localhost\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
             conexion = new SqlConnection("server=localhost\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true"); // lo dejo comentado pues es el que yo uso
@@ -64,7 +64,7 @@ namespace negocio
 
         public void cerrarConexion()
         {
-            if(lector != null)
+            if (lector != null)
             {
                 lector.Close();
                 conexion.Close();
@@ -74,3 +74,4 @@ namespace negocio
         }
     }
 }
+
