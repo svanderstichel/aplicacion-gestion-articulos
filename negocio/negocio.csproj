@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AccesoDatosMarca.cs" />
     <Compile Include="AltaArticuloNegocio.cs" />
+    <Compile Include="ListarArticuloNegocio.cs" />
     <Compile Include="MarcaNegocio.cs" />
     <Compile Include="ModificarArticuloNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
