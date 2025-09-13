@@ -36,6 +36,7 @@ namespace presentacion
                 articulo.Marca = (Marca)cmbMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cmbCategoria.SelectedItem;
                 articulo.Precio = decimal.Parse(txtPrecio.Text);
+                articulo.imagen= texUrlimagen.Text;
 
                 alta.agregar(articulo);
                 MessageBox.Show("Artículo agregado exitosamente!");
@@ -144,7 +145,7 @@ namespace presentacion
             catch (Exception )
             {
 
-                picImagenArticulo.Load ("https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/288.png");
+                picImagenArticulo.Load ("https://www.bing.com/th/id/OIP.uHy_0OCL5vScgIXck4yHxgAAAA?w=218&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2");
             }
         
         

@@ -52,8 +52,8 @@
             this.gbClasificacion = new System.Windows.Forms.GroupBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.gbImagenes = new System.Windows.Forms.GroupBox();
-            this.lblUrlimagen = new System.Windows.Forms.Label();
             this.texUrlimagen = new System.Windows.Forms.TextBox();
+            this.lblUrlimagen = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenArticulo)).BeginInit();
             this.gbDatosArticulo.SuspendLayout();
             this.gbClasificacion.SuspendLayout();
@@ -106,16 +106,17 @@
             // 
             // picImagenArticulo
             // 
-            this.picImagenArticulo.Location = new System.Drawing.Point(14, 112);
+            this.picImagenArticulo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.picImagenArticulo.Location = new System.Drawing.Point(47, 99);
             this.picImagenArticulo.Name = "picImagenArticulo";
-            this.picImagenArticulo.Size = new System.Drawing.Size(307, 173);
+            this.picImagenArticulo.Size = new System.Drawing.Size(237, 241);
             this.picImagenArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImagenArticulo.TabIndex = 7;
             this.picImagenArticulo.TabStop = false;
             // 
             // btnCargarImagenArticulo
             // 
-            this.btnCargarImagenArticulo.Location = new System.Drawing.Point(70, 18);
+            this.btnCargarImagenArticulo.Location = new System.Drawing.Point(87, 18);
             this.btnCargarImagenArticulo.Name = "btnCargarImagenArticulo";
             this.btnCargarImagenArticulo.Size = new System.Drawing.Size(172, 23);
             this.btnCargarImagenArticulo.TabIndex = 8;
@@ -261,10 +262,18 @@
             this.gbImagenes.Controls.Add(this.lblImagenCargada);
             this.gbImagenes.Location = new System.Drawing.Point(55, 324);
             this.gbImagenes.Name = "gbImagenes";
-            this.gbImagenes.Size = new System.Drawing.Size(335, 314);
+            this.gbImagenes.Size = new System.Drawing.Size(335, 357);
             this.gbImagenes.TabIndex = 2;
             this.gbImagenes.TabStop = false;
             this.gbImagenes.Text = "Imagenes del Artículo";
+            // 
+            // texUrlimagen
+            // 
+            this.texUrlimagen.Location = new System.Drawing.Point(140, 57);
+            this.texUrlimagen.Name = "texUrlimagen";
+            this.texUrlimagen.Size = new System.Drawing.Size(181, 19);
+            this.texUrlimagen.TabIndex = 6;
+            this.texUrlimagen.Leave += new System.EventHandler(this.texUrlimagen_Leave);
             // 
             // lblUrlimagen
             // 
@@ -274,14 +283,6 @@
             this.lblUrlimagen.Size = new System.Drawing.Size(118, 13);
             this.lblUrlimagen.TabIndex = 5;
             this.lblUrlimagen.Text = "Cargar URL Imagen";
-            // 
-            // texUrlimagen
-            // 
-            this.texUrlimagen.Location = new System.Drawing.Point(140, 57);
-            this.texUrlimagen.Name = "texUrlimagen";
-            this.texUrlimagen.Size = new System.Drawing.Size(100, 19);
-            this.texUrlimagen.TabIndex = 6;
-            this.texUrlimagen.Leave += new System.EventHandler(this.texUrlimagen_Leave);
             // 
             // FrmAltaArticulo
             // 
