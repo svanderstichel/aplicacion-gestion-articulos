@@ -45,8 +45,8 @@ namespace presentacion
         }
             //instancia ventana de alta articulo
             FrmAltaArticulo frmAltaArticulo = new FrmAltaArticulo();
-        frmAltaArticulo.MdiParent = this;
-        frmAltaArticulo.Show();
+            frmAltaArticulo.MdiParent = this;
+            frmAltaArticulo.Show();
         }
 
         private void bienvenidaToolStripMenuItem_Click(object sender, EventArgs e)
