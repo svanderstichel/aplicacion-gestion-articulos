@@ -37,9 +37,8 @@ namespace negocio
                     aux.Marca.Nombre = Convert.ToString(lector["Marca"]);
                     aux.Categoria = new Categoria();
                     aux.Categoria.Nombre = Convert.ToString(lector["Categoria"]);
-                    aux.Precio = Convert.ToDecimal(lector["Precio"]);
-                    /*aux.ListaImagenes = new List<Imagen>();
-                    aux.ListaImagenes.Add((Imagen)lector["Imagen"]);*/
+                    if (!(lector["Precio"] is DBNull))
+                        aux.Precio = Convert.ToDecimal(lector["Precio"]);
 
                     listaArticulos.Add(aux);
                 }
