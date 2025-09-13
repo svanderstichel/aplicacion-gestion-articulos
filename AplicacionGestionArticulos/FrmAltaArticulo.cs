@@ -35,7 +35,8 @@ namespace presentacion
                 articulo.Descripcion = txtDescripcionArtículo.Text;
                 articulo.Marca = (Marca)cmbMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cmbCategoria.SelectedItem;
-                //articulo.Precio= 
+                articulo.Precio = decimal.Parse(txtPrecio.Text);
+                articulo.imagen= texUrlimagen.Text;
 
                 alta.agregar(articulo);
                 MessageBox.Show("Artículo agregado exitosamente!");
@@ -118,5 +119,46 @@ namespace presentacion
         {
             
         }
+
+        private void txtDescripcionArtículo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numPrecio_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void texUrlimagen_Leave(object sender, EventArgs e)
+        {
+           
+            cargarImagen(texUrlimagen.Text);
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                picImagenArticulo.Load(imagen);
+            }
+            catch (Exception )
+            {
+
+                picImagenArticulo.Load ("https://www.bing.com/th/id/OIP.uHy_0OCL5vScgIXck4yHxgAAAA?w=218&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2");
+            }
+        
+        
+        
+        }
+
+
+
     }
+
+
+
+
+
+
 }
