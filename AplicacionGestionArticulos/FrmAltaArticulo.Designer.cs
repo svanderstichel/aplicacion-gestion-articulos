@@ -52,6 +52,7 @@
             this.gbDatosArticulo = new System.Windows.Forms.GroupBox();
             this.gbClasificacion = new System.Windows.Forms.GroupBox();
             this.gbImagenes = new System.Windows.Forms.GroupBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenArticulo)).BeginInit();
             this.gbDatosArticulo.SuspendLayout();
@@ -81,6 +82,7 @@
             this.txtDescripcionArtículo.Name = "txtDescripcionArtículo";
             this.txtDescripcionArtículo.Size = new System.Drawing.Size(132, 22);
             this.txtDescripcionArtículo.TabIndex = 3;
+            this.txtDescripcionArtículo.TextChanged += new System.EventHandler(this.txtDescripcionArtículo_TextChanged);
             // 
             // cmbMarca
             // 
@@ -104,7 +106,7 @@
             // 
             // numPrecio
             // 
-            this.numPrecio.Location = new System.Drawing.Point(657, 31);
+            this.numPrecio.Location = new System.Drawing.Point(830, 277);
             this.numPrecio.Name = "numPrecio";
             this.numPrecio.Size = new System.Drawing.Size(135, 19);
             this.numPrecio.TabIndex = 6;
@@ -234,9 +236,9 @@
             // 
             // gbClasificacion
             // 
+            this.gbClasificacion.Controls.Add(this.txtPrecio);
             this.gbClasificacion.Controls.Add(this.cmbMarca);
             this.gbClasificacion.Controls.Add(this.cmbCategoria);
-            this.gbClasificacion.Controls.Add(this.numPrecio);
             this.gbClasificacion.Controls.Add(this.lblMarca);
             this.gbClasificacion.Controls.Add(this.lblPrecio);
             this.gbClasificacion.Controls.Add(this.lblCategoria);
@@ -261,6 +263,13 @@
             this.gbImagenes.TabStop = false;
             this.gbImagenes.Text = "Imagenes del Artículo";
             // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(651, 31);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(140, 19);
+            this.txtPrecio.TabIndex = 17;
+            // 
             // FrmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -270,6 +279,7 @@
             this.Controls.Add(this.gbImagenes);
             this.Controls.Add(this.gbClasificacion);
             this.Controls.Add(this.GuardarImagen);
+            this.Controls.Add(this.numPrecio);
             this.Controls.Add(this.btnCancelarImagenArticulo);
             this.Controls.Add(this.gbDatosArticulo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -315,5 +325,6 @@
         private System.Windows.Forms.GroupBox gbDatosArticulo;
         private System.Windows.Forms.GroupBox gbClasificacion;
         private System.Windows.Forms.GroupBox gbImagenes;
+        private System.Windows.Forms.TextBox txtPrecio;
     }
 }

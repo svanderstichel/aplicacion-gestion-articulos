@@ -35,7 +35,7 @@ namespace presentacion
                 articulo.Descripcion = txtDescripcionArtículo.Text;
                 articulo.Marca = (Marca)cmbMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cmbCategoria.SelectedItem;
-                //articulo.Precio= 
+                articulo.Precio = decimal.Parse(txtPrecio.Text);
 
                 alta.agregar(articulo);
                 MessageBox.Show("Artículo agregado exitosamente!");
@@ -117,6 +117,11 @@ namespace presentacion
         private void gbClasificacion_Enter(object sender, EventArgs e)
         {
             
+        }
+
+        private void txtDescripcionArtículo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
