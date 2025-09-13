@@ -36,7 +36,6 @@
             this.txtDescripcionArtículo = new System.Windows.Forms.TextBox();
             this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
-            this.numPrecio = new System.Windows.Forms.NumericUpDown();
             this.picImagenArticulo = new System.Windows.Forms.PictureBox();
             this.btnCargarImagenArticulo = new System.Windows.Forms.Button();
             this.GuardarImagen = new System.Windows.Forms.Button();
@@ -51,9 +50,8 @@
             this.lblCargarImagen = new System.Windows.Forms.Label();
             this.gbDatosArticulo = new System.Windows.Forms.GroupBox();
             this.gbClasificacion = new System.Windows.Forms.GroupBox();
-            this.gbImagenes = new System.Windows.Forms.GroupBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
+            this.gbImagenes = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenArticulo)).BeginInit();
             this.gbDatosArticulo.SuspendLayout();
             this.gbClasificacion.SuspendLayout();
@@ -103,13 +101,6 @@
             this.cmbCategoria.Size = new System.Drawing.Size(136, 21);
             this.cmbCategoria.TabIndex = 5;
             this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
-            // 
-            // numPrecio
-            // 
-            this.numPrecio.Location = new System.Drawing.Point(830, 277);
-            this.numPrecio.Name = "numPrecio";
-            this.numPrecio.Size = new System.Drawing.Size(135, 19);
-            this.numPrecio.TabIndex = 6;
             // 
             // picImagenArticulo
             // 
@@ -250,6 +241,13 @@
             this.gbClasificacion.Text = "Clasificacion Articulo";
             this.gbClasificacion.Enter += new System.EventHandler(this.gbClasificacion_Enter);
             // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(651, 31);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(140, 19);
+            this.txtPrecio.TabIndex = 17;
+            // 
             // gbImagenes
             // 
             this.gbImagenes.Controls.Add(this.btnCargarImagenArticulo);
@@ -263,13 +261,6 @@
             this.gbImagenes.TabStop = false;
             this.gbImagenes.Text = "Imagenes del Artículo";
             // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(651, 31);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(140, 19);
-            this.txtPrecio.TabIndex = 17;
-            // 
             // FrmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -279,7 +270,6 @@
             this.Controls.Add(this.gbImagenes);
             this.Controls.Add(this.gbClasificacion);
             this.Controls.Add(this.GuardarImagen);
-            this.Controls.Add(this.numPrecio);
             this.Controls.Add(this.btnCancelarImagenArticulo);
             this.Controls.Add(this.gbDatosArticulo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -290,7 +280,6 @@
             this.Text = "Crear nuevo artículo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmAltaArticulo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picImagenArticulo)).EndInit();
             this.gbDatosArticulo.ResumeLayout(false);
             this.gbDatosArticulo.PerformLayout();
@@ -309,7 +298,6 @@
         private System.Windows.Forms.TextBox txtDescripcionArtículo;
         private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.ComboBox cmbCategoria;
-        private System.Windows.Forms.NumericUpDown numPrecio;
         private System.Windows.Forms.PictureBox picImagenArticulo;
         private System.Windows.Forms.Button btnCargarImagenArticulo;
         private System.Windows.Forms.Button GuardarImagen;

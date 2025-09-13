@@ -123,5 +123,10 @@ namespace presentacion
         {
 
         }
+
+        private void numPrecio_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
