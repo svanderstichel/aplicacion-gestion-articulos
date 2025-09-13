@@ -16,7 +16,8 @@ namespace presentacion
     public partial class FrmListarArticulo : Form
     {
         private List<Articulo> listaArticulos;
-        private bool cargando = true;
+        private bool cargando;
+
         public FrmListarArticulo()
         {
             InitializeComponent();
@@ -28,8 +29,9 @@ namespace presentacion
             alta.ShowDialog();
         }
 
-        private void FrmListarArticulo_Load(object sender, EventArgs e)
+        private void cargarDgv()
         {
+            cargando = true;
             ListarArticuloNegocio negocio = new ListarArticuloNegocio();
             listaArticulos = negocio.ListarArticulos();
             dgvListadoArticulos.DataSource = listaArticulos;
@@ -38,17 +40,23 @@ namespace presentacion
             MarcaNegocio marcas = new MarcaNegocio();
 
             try
-            {   
+            {
                 cmbCategoria.DataSource = categorias.Listar();
                 cmbMarca.DataSource = marcas.Listar();
                 cmbMarca.SelectedIndex = -1;
                 cmbCategoria.SelectedIndex = -1;
                 cargando = false;
 
-            } catch (Exception Ex)
+            }
+            catch (Exception Ex)
             {
                 throw Ex;
             }
+        }
+
+        private void FrmListarArticulo_Load(object sender, EventArgs e)
+        {
+            cargarDgv();
             
         }
 
@@ -77,7 +85,7 @@ namespace presentacion
             if (filtro != "")
             {
                 List<Articulo> listaFiltrada;
-                listaFiltrada = listaArticulos.FindAll(articulo => Convert.ToString(articulo.Nombre) == filtro);
+                listaFiltrada = listaArticulos.FindAll(articulo => Convert.ToString(articulo.Nombre).ToUpper().Contains(filtro.ToUpper()));
                 dgvListadoArticulos.DataSource = listaFiltrada;
             }
             else
@@ -106,6 +114,27 @@ namespace presentacion
             this.Close();
             FrmPrincipal volver = new FrmPrincipal();
             volver.ShowDialog();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                DialogResult respuesta = MessageBox.Show("Eliminar registro de manera permanente?","Advertencia de eliminado f",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    Articulo seleccionado = (Articulo)dgvListadoArticulos.CurrentRow.DataBoundItem;
+                    ModificarArticuloNegocio articuloNegocio = new ModificarArticuloNegocio();
+                    articuloNegocio.Eliminar(seleccionado.IdArticulo);
+                    cargarDgv();
+                }
+            }
+            catch(Exception Ex)
+            {
+                throw Ex;
+            }
+
+
         }
     }
 }
