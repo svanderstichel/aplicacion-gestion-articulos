@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Net;
+using System.ComponentModel.Design;
 
 
 
@@ -21,53 +23,48 @@ namespace negocio
         public void agregar(Articulo nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
-            
+
             try
             {
-                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio ) values ('" + nuevo.CodigoArticulo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "', @IdMarca, @IdCategoria, '"+ nuevo.Precio+"')");
-                //datos.setearConsulta("Insert into IMAGENES values ('" + nuevo.IdArticulo + "','" + nuevo.imagen + "')");
+                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio ) output inserted.Id values ('" + nuevo.CodigoArticulo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "', @IdMarca, @IdCategoria, '" + nuevo.Precio + "')");
                 datos.setearParametro("@IdMarca", nuevo.Marca.IdMarca);
                 datos.setearParametro("@IdCategoria", nuevo.Categoria.IdCategoria);
-                datos.ejercutarLectura();
-
+                nuevo.IdArticulo=datos.BuscarDato();
+                
+                
+                
             }
 
-            catch (Exception ex)
+            catch (Exception )
             {
 
-                throw ex;
+                throw ;
+             
+
             }
             finally
-            {
+            {   
                 datos.cerrarConexion();
             }
-            //---------------------------------------------------
             
-
             try
-            {
-                //datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio )values ('" + nuevo.CodigoArticulo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "', @IdMarca, @IdCategoria, '" + nuevo.Precio + "')");
-                datos.setearConsulta("Insert into IMAGENES values ('" +nuevo.IdArticulo + "','" + nuevo.imagen + "')");
-                //datos.setearParametro("@IdMarca", nuevo.Marca.IdMarca);
-                //datos.setearParametro("@IdCategoria", nuevo.Categoria.IdCategoria);
-                datos.ejercutarLectura();
+            {   
+                datos.setearConsulta("Insert into IMAGENES values ('" + nuevo.IdArticulo + "','" + nuevo.imagen + "')");
+                datos.ejecutarAccion();
+                
 
             }
 
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
             {
                 datos.cerrarConexion();
             }
-            //-----------------------------------------------------
+
         }
-        public void modificar(Articulo modificar) { }
-
     }
-
 }
 

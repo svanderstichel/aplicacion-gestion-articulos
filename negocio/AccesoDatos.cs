@@ -78,7 +78,34 @@ namespace negocio
 
         }
 
+        public int BuscarDato()
+        {
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                int valor=(int)comando.ExecuteScalar();
 
-      
+                return valor;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
     }
-}
+    }
+
+        
