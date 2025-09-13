@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AplicacionGestionArticulos;
 using dominio;
 using negocio;
 
@@ -153,8 +154,12 @@ namespace presentacion
         
         }
 
-
-
+        private void btnCargarMasImagenArticulo_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmCargarMasImagenes volver = new FrmCargarMasImagenes();
+            volver.ShowDialog();
+        }
     }
 
 
