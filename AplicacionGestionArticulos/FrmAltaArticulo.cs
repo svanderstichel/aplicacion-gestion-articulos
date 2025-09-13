@@ -37,6 +37,7 @@ namespace presentacion
                 articulo.Categoria = (Categoria)cmbCategoria.SelectedItem;
                 articulo.Precio = decimal.Parse(txtPrecio.Text);
                 articulo.imagen= texUrlimagen.Text;
+                //articulo.ListaImagenes.Add();
 
                 alta.agregar(articulo);
                 MessageBox.Show("Artículo agregado exitosamente!");
@@ -145,7 +146,7 @@ namespace presentacion
             catch (Exception )
             {
 
-                picImagenArticulo.Load ("https://www.bing.com/th/id/OIP.uHy_0OCL5vScgIXck4yHxgAAAA?w=218&h=211&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2");
+                picImagenArticulo.Load ("https://th.bing.com/th/id/OIP.y4-StvPPKc3wQK2ULk-hIQAAAA?w=176&h=180&c=7&r=0&o=5&pid=1.7");
             }
         
         

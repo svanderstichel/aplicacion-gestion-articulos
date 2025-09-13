@@ -34,6 +34,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.botCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -91,12 +92,23 @@
             this.button2.Text = "Crear";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // botCancelar
+            // 
+            this.botCancelar.Location = new System.Drawing.Point(501, 405);
+            this.botCancelar.Name = "botCancelar";
+            this.botCancelar.Size = new System.Drawing.Size(75, 23);
+            this.botCancelar.TabIndex = 5;
+            this.botCancelar.Text = "Cancelar";
+            this.botCancelar.UseVisualStyleBackColor = true;
+            this.botCancelar.Click += new System.EventHandler(this.botCancelar_Click);
+            // 
             // FrmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botCancelar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
@@ -121,5 +133,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button botCancelar;
     }
 }

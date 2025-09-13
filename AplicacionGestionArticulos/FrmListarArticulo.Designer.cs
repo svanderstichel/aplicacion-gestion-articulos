@@ -40,6 +40,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.botCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoArticulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             this.dgvListadoArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListadoArticulos.Size = new System.Drawing.Size(776, 312);
             this.dgvListadoArticulos.TabIndex = 0;
+            this.dgvListadoArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListadoArticulos_CellContentClick);
             // 
             // cmbCategoria
             // 
@@ -134,6 +136,7 @@
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(179, 20);
             this.txtFiltro.TabIndex = 7;
+            this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
             // btnBuscar
             // 
@@ -163,12 +166,23 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Marca";
             // 
+            // botCancelar
+            // 
+            this.botCancelar.Location = new System.Drawing.Point(373, 395);
+            this.botCancelar.Name = "botCancelar";
+            this.botCancelar.Size = new System.Drawing.Size(112, 37);
+            this.botCancelar.TabIndex = 11;
+            this.botCancelar.Text = "Cancelar";
+            this.botCancelar.UseVisualStyleBackColor = true;
+            this.botCancelar.Click += new System.EventHandler(this.botCancelar_Click);
+            // 
             // FrmListarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.botCancelar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscar);
@@ -207,5 +221,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button botCancelar;
     }
 }

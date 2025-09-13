@@ -83,6 +83,13 @@ namespace presentacion
         private void BotonCancelarCargaMarca_Click(object sender, EventArgs e)
         {
             this.Close();
+            FrmPrincipal volver = new FrmPrincipal();
+            volver.ShowDialog();
+        }
+
+        private void txtCargarNombreMarca_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

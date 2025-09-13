@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 
 
@@ -20,12 +21,11 @@ namespace negocio
         public void agregar(Articulo nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
-
-
+            
             try
             {
-                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio )values ('" + nuevo.CodigoArticulo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "', @IdMarca, @IdCategoria, '"+ nuevo.Precio+"')");
-                //datos.setearConsulta("Insert into IMAGENES values ('" + nuevo.CodigoArticulo + "','" + nuevo.imagen + "')");
+                datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio ) values ('" + nuevo.CodigoArticulo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "', @IdMarca, @IdCategoria, '"+ nuevo.Precio+"')");
+                //datos.setearConsulta("Insert into IMAGENES values ('" + nuevo.IdArticulo + "','" + nuevo.imagen + "')");
                 datos.setearParametro("@IdMarca", nuevo.Marca.IdMarca);
                 datos.setearParametro("@IdCategoria", nuevo.Categoria.IdCategoria);
                 datos.ejercutarLectura();
@@ -42,10 +42,12 @@ namespace negocio
                 datos.cerrarConexion();
             }
             //---------------------------------------------------
+            
+
             try
             {
                 //datos.setearConsulta("Insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio )values ('" + nuevo.CodigoArticulo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "', @IdMarca, @IdCategoria, '" + nuevo.Precio + "')");
-                datos.setearConsulta("Insert into IMAGENES values ('" + nuevo.CodigoArticulo + "','" + nuevo.imagen + "')");
+                datos.setearConsulta("Insert into IMAGENES values ('" +nuevo.IdArticulo + "','" + nuevo.imagen + "')");
                 //datos.setearParametro("@IdMarca", nuevo.Marca.IdMarca);
                 //datos.setearParametro("@IdCategoria", nuevo.Categoria.IdCategoria);
                 datos.ejercutarLectura();

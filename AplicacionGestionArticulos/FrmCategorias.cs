@@ -16,5 +16,12 @@ namespace presentacion
         {
             InitializeComponent();
         }
+
+        private void botCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmPrincipal volver = new FrmPrincipal();
+            volver.ShowDialog();
+        }
     }
 }

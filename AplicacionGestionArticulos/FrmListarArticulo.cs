@@ -90,5 +90,22 @@ namespace presentacion
         {
 
         }
+
+        private void dgvListadoArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtFiltro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmPrincipal volver = new FrmPrincipal();
+            volver.ShowDialog();
+        }
     }
 }
