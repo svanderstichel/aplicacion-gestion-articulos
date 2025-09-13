@@ -128,5 +128,36 @@ namespace presentacion
         {
 
         }
+
+        private void texUrlimagen_Leave(object sender, EventArgs e)
+        {
+           
+            cargarImagen(texUrlimagen.Text);
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                picImagenArticulo.Load(imagen);
+            }
+            catch (Exception )
+            {
+
+                picImagenArticulo.Load ("https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/288.png");
+            }
+        
+        
+        
+        }
+
+
+
     }
+
+
+
+
+
+
 }
