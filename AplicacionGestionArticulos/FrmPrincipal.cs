@@ -138,8 +138,12 @@ namespace presentacion
             {
                 form.Close();
             }
+            //instancia ventana de alta articulo
+            FrmCategorias frmCategorias = new FrmCategorias();
+            frmCategorias.MdiParent = this;
+            frmCategorias.Show();
 
-            
+
         }
 
         
