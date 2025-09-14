@@ -29,13 +29,14 @@ namespace AplicacionGestionArticulos
             List<Imagen> listaFotos = negocio.ListarFotos(articulo);
             dgvFotos.DataSource = listaFotos;
             dgvFotos.Columns["IdImagen"].Visible = false;
-            
+            dgvFotos.Columns["IdArticulo"].Visible = false;
+
 
             if (dgvFotos.Rows.Count > 0)
             {
-                dgvFotos.ClearSelection();                     // limpia selección previa
-                dgvFotos.Rows[0].Selected = true;              // marca la primera fila
-                dgvFotos.CurrentCell = dgvFotos.Rows[0].Cells[1]; // mueve el foco
+                dgvFotos.ClearSelection();                     
+                dgvFotos.Rows[0].Selected = true;              
+                dgvFotos.CurrentCell = dgvFotos.Rows[0].Cells[1]; 
             }
 
             cargarImagen();

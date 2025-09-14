@@ -12,16 +12,16 @@ namespace dominio
     public class Articulo
     {
 
-        [ DisplayName("Id Artìculo")]
+        [ DisplayName("Id Artículo")]
         public int IdArticulo { get; set; }
         //public int CodigoArticulo { get; set; } en la BD està como Varchar. 
-        [DisplayName("Còdigo Artìculo")]
+        [DisplayName("Còdigo Artículo")]
         public string CodigoArticulo { get; set; } // Por eso lo agrego como string aqui
         public string Nombre { get; set; }
-        [DisplayName("Descripciòn")]
+        [DisplayName("Descripción")]
         public string Descripcion { get; set; }
         public Marca Marca { get; set; }
-        [DisplayName("Categorìa")]
+        [DisplayName("Categoría")]
         public Categoria Categoria { get; set; }
         public List<Imagen> ListaImagenes { get; set; }
         public string imagen { get; set; }

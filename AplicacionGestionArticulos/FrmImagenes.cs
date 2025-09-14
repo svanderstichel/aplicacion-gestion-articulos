@@ -46,7 +46,7 @@ namespace AplicacionGestionArticulos
                 ImagenNegocio negocio = new ImagenNegocio();
 
                 nueva.IdArticulo = int.Parse(texCodArtMasImagen.Text);
-                nueva.Url = texCodArtMasImagen.Text;
+                nueva.Url = txtUrl.Text;
 
                 negocio.Agregar(nueva);
 
