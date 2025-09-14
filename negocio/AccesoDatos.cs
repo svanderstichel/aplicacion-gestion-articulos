@@ -10,9 +10,9 @@ namespace negocio
 {
     public class AccesoDatos
     {
-        private SqlConnection conexion;// Conector con la BD
-        private SqlCommand comando; // me permite hacer Acciones luego de conectarme
-        private SqlDataReader lector;// Guardo el set de datos que tomo de la BD
+        public SqlConnection conexion;// Conector con la BD
+        public SqlCommand comando; // me permite hacer Acciones luego de conectarme
+        public SqlDataReader lector;// Guardo el set de datos que tomo de la BD
 
         // mètodo para realizar la conexion a la BD
         public AccesoDatos()
