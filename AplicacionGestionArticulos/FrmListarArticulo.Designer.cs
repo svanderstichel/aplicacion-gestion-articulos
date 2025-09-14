@@ -33,7 +33,7 @@
             this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblListadoArticulos = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnVerFotos = new System.Windows.Forms.Button();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
@@ -100,14 +100,15 @@
             this.lblListadoArticulos.Text = "Listado de artículos";
             this.lblListadoArticulos.Click += new System.EventHandler(this.lblListadoArticulos_Click);
             // 
-            // button1
+            // btnVerFotos
             // 
-            this.button1.Location = new System.Drawing.Point(12, 396);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 36);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Ver detalle";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnVerFotos.Location = new System.Drawing.Point(12, 396);
+            this.btnVerFotos.Name = "btnVerFotos";
+            this.btnVerFotos.Size = new System.Drawing.Size(119, 36);
+            this.btnVerFotos.TabIndex = 2;
+            this.btnVerFotos.Text = "Ver fotos";
+            this.btnVerFotos.UseVisualStyleBackColor = true;
+            this.btnVerFotos.Click += new System.EventHandler(this.btnVerFotos_Click);
             // 
             // btnModificarArticulo
             // 
@@ -190,7 +191,7 @@
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnModificarArticulo);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnVerFotos);
             this.Controls.Add(this.lblListadoArticulos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.cmbMarca);
@@ -215,7 +216,7 @@
         private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblListadoArticulos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVerFotos;
         private System.Windows.Forms.Button btnModificarArticulo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFiltro;

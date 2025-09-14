@@ -12,7 +12,7 @@ namespace negocio
     {
         private SqlConnection conexion;// Conector con la BD
         private SqlCommand comando; // me permite hacer Acciones luego de conectarme
-        private SqlDataReader lector;// Guardo el set de datos que tomo de la BD
+        public SqlDataReader lector;// Guardo el set de datos que tomo de la BD
 
         // mètodo para realizar la conexion a la BD
         public AccesoDatos()

@@ -1,4 +1,5 @@
-﻿using dominio;
+﻿using AplicacionGestionArticulos;
+using dominio;
 using negocio;
 using System;
 using System.Collections.Generic;
@@ -153,6 +154,14 @@ namespace presentacion
             }
 
 
+        }
+
+        private void btnVerFotos_Click(object sender, EventArgs e)
+        {
+            Articulo articuloSeleccionado = (Articulo)dgvListadoArticulos.CurrentRow.DataBoundItem;
+            FrmListarFotos listarFotos = new FrmListarFotos(articuloSeleccionado);
+            listarFotos.ShowDialog();
+            
         }
     }
 }
