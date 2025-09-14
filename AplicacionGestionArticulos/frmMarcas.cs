@@ -82,9 +82,11 @@ namespace presentacion
 
         private void BotonCancelarCargaMarca_Click(object sender, EventArgs e)
         {
-            this.Close();
-            FrmPrincipal volver = new FrmPrincipal();
-            volver.ShowDialog();
+            // cierro todos los formularios hijos abiertos
+            foreach (Form form in this.MdiParent.MdiChildren)
+            {
+                form.Close();
+            }
         }
 
         private void txtCargarNombreMarca_TextChanged(object sender, EventArgs e)

@@ -23,10 +23,22 @@ namespace presentacion
             InitializeComponent();
         }
 
-        private void btnAgregarArticuloDesdeLista_Click(object sender, EventArgs e)
+        private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
-            FrmAltaArticulo alta = new FrmAltaArticulo();
-            alta.ShowDialog();
+            Articulo seleccionado = (Articulo)dgvListadoArticulos.CurrentRow.DataBoundItem;
+            //cierro los forms abiertos
+            foreach (Form form in this.MdiParent.MdiChildren)
+            {
+                form.Close();
+            }
+
+            // abro el nuevo forms con el constructor sobrecargado
+            FrmAltaArticulo frmAltaArticulo = new FrmAltaArticulo(seleccionado);
+            frmAltaArticulo.WindowState = FormWindowState.Normal;
+            frmAltaArticulo.ShowDialog();
+
+
+
         }
 
         private void cargarDgv()
@@ -35,6 +47,8 @@ namespace presentacion
             ListarArticuloNegocio negocio = new ListarArticuloNegocio();
             listaArticulos = negocio.ListarArticulos();
             dgvListadoArticulos.DataSource = listaArticulos;
+            dgvListadoArticulos.Columns["imagen"].Visible = false;
+            dgvListadoArticulos.Columns["IdArticulo"].Visible = false;
 
             CategoriaNegocio categorias = new CategoriaNegocio();
             MarcaNegocio marcas = new MarcaNegocio();
@@ -111,9 +125,13 @@ namespace presentacion
 
         private void botCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            FrmPrincipal volver = new FrmPrincipal();
-            volver.ShowDialog();
+            // cierro todos los formularios hijos abiertos
+            foreach (Form form in this.MdiParent.MdiChildren)
+            {
+                form.Close();
+            }
+
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

@@ -34,7 +34,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblListadoArticulos = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnAgregarArticuloDesdeLista = new System.Windows.Forms.Button();
+            this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -109,17 +109,17 @@
             this.button1.Text = "Ver detalle";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // btnAgregarArticuloDesdeLista
+            // btnModificarArticulo
             // 
-            this.btnAgregarArticuloDesdeLista.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnAgregarArticuloDesdeLista.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAgregarArticuloDesdeLista.Location = new System.Drawing.Point(491, 395);
-            this.btnAgregarArticuloDesdeLista.Name = "btnAgregarArticuloDesdeLista";
-            this.btnAgregarArticuloDesdeLista.Size = new System.Drawing.Size(141, 37);
-            this.btnAgregarArticuloDesdeLista.TabIndex = 5;
-            this.btnAgregarArticuloDesdeLista.Text = "Agregar";
-            this.btnAgregarArticuloDesdeLista.UseVisualStyleBackColor = true;
-            this.btnAgregarArticuloDesdeLista.Click += new System.EventHandler(this.btnAgregarArticuloDesdeLista_Click);
+            this.btnModificarArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnModificarArticulo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnModificarArticulo.Location = new System.Drawing.Point(491, 395);
+            this.btnModificarArticulo.Name = "btnModificarArticulo";
+            this.btnModificarArticulo.Size = new System.Drawing.Size(141, 37);
+            this.btnModificarArticulo.TabIndex = 5;
+            this.btnModificarArticulo.Text = "Modificar";
+            this.btnModificarArticulo.UseVisualStyleBackColor = true;
+            this.btnModificarArticulo.Click += new System.EventHandler(this.btnModificarArticulo_Click);
             // 
             // label1
             // 
@@ -189,7 +189,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAgregarArticuloDesdeLista);
+            this.Controls.Add(this.btnModificarArticulo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblListadoArticulos);
             this.Controls.Add(this.btnEliminar);
@@ -216,7 +216,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblListadoArticulos;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnAgregarArticuloDesdeLista;
+        private System.Windows.Forms.Button btnModificarArticulo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Button btnBuscar;

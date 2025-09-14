@@ -73,28 +73,6 @@ namespace presentacion
             frmBienvenida.Show();
         }
 
-        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
-        { 
-                //verifica que la tabla no exista antes de instanciarla
-                foreach (var item in Application.OpenForms)
-                {
-                    if (item.GetType() == typeof(FrmModificarArticulo))
-                {
-                    MessageBox.Show("Ya existe una ventaba abierta, complete los campos");
-                    return;
-                }
-            }
-                // Cierro todos las ventanas abiertas
-                foreach (Form form in this.MdiChildren)
-                {
-                    form.Close();
-                }
-                //instancia ventana de modificar articulo
-                FrmModificarArticulo frmModificarArticulo = new FrmModificarArticulo();
-                frmModificarArticulo.MdiParent = this;
-                frmModificarArticulo.Show();
-            }
-
         private void listarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //verifica que la tabla no exista antes de instanciarla
