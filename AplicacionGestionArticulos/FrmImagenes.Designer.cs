@@ -1,6 +1,6 @@
 ﻿namespace AplicacionGestionArticulos
 {
-    partial class FrmCargarMasImagenes
+    partial class FrmImagenes
     {
         /// <summary>
         /// Required designer variable.

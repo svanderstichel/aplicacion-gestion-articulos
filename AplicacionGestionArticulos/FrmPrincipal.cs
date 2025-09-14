@@ -149,7 +149,7 @@ namespace presentacion
             //verifica que la tabla no exista antes de instanciarla
             foreach (var item in Application.OpenForms)
             {
-                if (item.GetType() == typeof(FrmCargarMasImagenes))
+                if (item.GetType() == typeof(FrmImagenes))
                 {
                     MessageBox.Show("Ya existe una ventaba abierta, complete los campos");
                     return;
@@ -161,7 +161,7 @@ namespace presentacion
                 form.Close();
             }
                 //instancia ventana de alta articulo
-                FrmCargarMasImagenes frmCargarImagenes = new FrmCargarMasImagenes();
+                FrmImagenes frmCargarImagenes = new FrmImagenes();
                 frmCargarImagenes.MdiParent = this;
                 frmCargarImagenes.Show();
             

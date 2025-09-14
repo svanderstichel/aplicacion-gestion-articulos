@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace AplicacionGestionArticulos
 {
-    public partial class FrmCargarMasImagenes : Form
+    public partial class FrmImagenes : Form
     {
-        public FrmCargarMasImagenes()
+        public FrmImagenes()
         {
             InitializeComponent();
         }

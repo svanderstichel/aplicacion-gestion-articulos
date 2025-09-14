@@ -178,7 +178,7 @@ namespace presentacion
         private void btnCargarMasImagenArticulo_Click(object sender, EventArgs e)
         {
             this.Close();
-            FrmCargarMasImagenes volver = new FrmCargarMasImagenes();
+            FrmImagenes volver = new FrmImagenes();
             volver.ShowDialog();
         }
     }

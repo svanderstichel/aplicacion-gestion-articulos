@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmCargarMasImagenes.cs">
+    <Compile Include="FrmImagenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCargarMasImagenes.Designer.cs">
-      <DependentUpon>FrmCargarMasImagenes.cs</DependentUpon>
+    <Compile Include="FrmImagenes.Designer.cs">
+      <DependentUpon>FrmImagenes.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCategorias.cs">
       <SubType>Form</SubType>
@@ -92,8 +92,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmCargarMasImagenes.resx">
-      <DependentUpon>FrmCargarMasImagenes.cs</DependentUpon>
+    <EmbeddedResource Include="FrmImagenes.resx">
+      <DependentUpon>FrmImagenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBienvenida.resx">
       <DependentUpon>FrmBienvenida.cs</DependentUpon>

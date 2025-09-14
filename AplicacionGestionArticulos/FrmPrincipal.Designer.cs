@@ -33,13 +33,13 @@
             this.articulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargarMàsImagenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bienvenidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargarMàsImagenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +62,6 @@
             // 
             this.articulosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearToolStripMenuItem,
-            this.modificarToolStripMenuItem,
             this.listarToolStripMenuItem,
             this.cargarMàsImagenesToolStripMenuItem});
             this.articulosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -75,23 +74,23 @@
             // crearToolStripMenuItem
             // 
             this.crearToolStripMenuItem.Name = "crearToolStripMenuItem";
-            this.crearToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.crearToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.crearToolStripMenuItem.Text = "Crear";
             this.crearToolStripMenuItem.Click += new System.EventHandler(this.crearToolStripMenuItem_Click);
-            // 
-            // modificarToolStripMenuItem
-            // 
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.modificarToolStripMenuItem.Text = "Modificar";
-            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listarToolStripMenuItem.Text = "Listar";
             this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
+            // 
+            // cargarMàsImagenesToolStripMenuItem
+            // 
+            this.cargarMàsImagenesToolStripMenuItem.Name = "cargarMàsImagenesToolStripMenuItem";
+            this.cargarMàsImagenesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cargarMàsImagenesToolStripMenuItem.Text = "Imágenes";
+            this.cargarMàsImagenesToolStripMenuItem.Click += new System.EventHandler(this.cargarMàsImagenesToolStripMenuItem_Click);
             // 
             // marcasToolStripMenuItem
             // 
@@ -140,13 +139,6 @@
             this.bienvenidaToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.bienvenidaToolStripMenuItem.Text = "Bienvenida";
             this.bienvenidaToolStripMenuItem.Click += new System.EventHandler(this.bienvenidaToolStripMenuItem_Click);
-            // 
-            // cargarMàsImagenesToolStripMenuItem
-            // 
-            this.cargarMàsImagenesToolStripMenuItem.Name = "cargarMàsImagenesToolStripMenuItem";
-            this.cargarMàsImagenesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.cargarMàsImagenesToolStripMenuItem.Text = "Cargar Màs Imagenes";
-            this.cargarMàsImagenesToolStripMenuItem.Click += new System.EventHandler(this.cargarMàsImagenesToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
