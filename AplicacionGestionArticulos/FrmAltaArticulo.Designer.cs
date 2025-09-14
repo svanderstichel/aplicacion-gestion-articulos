@@ -37,7 +37,7 @@
             this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.picImagenArticulo = new System.Windows.Forms.PictureBox();
-            this.btnCargarImagenArticulo = new System.Windows.Forms.Button();
+            this.btnCargarMasImagenArticulo = new System.Windows.Forms.Button();
             this.GuardarImagen = new System.Windows.Forms.Button();
             this.btnCancelarImagenArticulo = new System.Windows.Forms.Button();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -107,27 +107,28 @@
             // picImagenArticulo
             // 
             this.picImagenArticulo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.picImagenArticulo.Location = new System.Drawing.Point(47, 99);
+            this.picImagenArticulo.Location = new System.Drawing.Point(524, 102);
             this.picImagenArticulo.Name = "picImagenArticulo";
             this.picImagenArticulo.Size = new System.Drawing.Size(237, 241);
             this.picImagenArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImagenArticulo.TabIndex = 7;
             this.picImagenArticulo.TabStop = false;
             // 
-            // btnCargarImagenArticulo
+            // btnCargarMasImagenArticulo
             // 
-            this.btnCargarImagenArticulo.Location = new System.Drawing.Point(87, 18);
-            this.btnCargarImagenArticulo.Name = "btnCargarImagenArticulo";
-            this.btnCargarImagenArticulo.Size = new System.Drawing.Size(172, 23);
-            this.btnCargarImagenArticulo.TabIndex = 8;
-            this.btnCargarImagenArticulo.Text = "Seleccionar Imagen";
-            this.btnCargarImagenArticulo.UseVisualStyleBackColor = true;
+            this.btnCargarMasImagenArticulo.Location = new System.Drawing.Point(19, 102);
+            this.btnCargarMasImagenArticulo.Name = "btnCargarMasImagenArticulo";
+            this.btnCargarMasImagenArticulo.Size = new System.Drawing.Size(172, 38);
+            this.btnCargarMasImagenArticulo.TabIndex = 8;
+            this.btnCargarMasImagenArticulo.Text = "Cargar Mas Imagenes";
+            this.btnCargarMasImagenArticulo.UseVisualStyleBackColor = true;
+            this.btnCargarMasImagenArticulo.Click += new System.EventHandler(this.btnCargarMasImagenArticulo_Click);
             // 
             // GuardarImagen
             // 
-            this.GuardarImagen.Location = new System.Drawing.Point(485, 397);
+            this.GuardarImagen.Location = new System.Drawing.Point(579, 687);
             this.GuardarImagen.Name = "GuardarImagen";
-            this.GuardarImagen.Size = new System.Drawing.Size(84, 23);
+            this.GuardarImagen.Size = new System.Drawing.Size(112, 41);
             this.GuardarImagen.TabIndex = 3;
             this.GuardarImagen.Text = "Guardar";
             this.GuardarImagen.UseVisualStyleBackColor = true;
@@ -135,9 +136,9 @@
             // 
             // btnCancelarImagenArticulo
             // 
-            this.btnCancelarImagenArticulo.Location = new System.Drawing.Point(680, 397);
+            this.btnCancelarImagenArticulo.Location = new System.Drawing.Point(714, 687);
             this.btnCancelarImagenArticulo.Name = "btnCancelarImagenArticulo";
-            this.btnCancelarImagenArticulo.Size = new System.Drawing.Size(84, 23);
+            this.btnCancelarImagenArticulo.Size = new System.Drawing.Size(102, 41);
             this.btnCancelarImagenArticulo.TabIndex = 4;
             this.btnCancelarImagenArticulo.Text = "Cancelar";
             this.btnCancelarImagenArticulo.UseVisualStyleBackColor = true;
@@ -200,7 +201,7 @@
             // lblImagenCargada
             // 
             this.lblImagenCargada.AutoSize = true;
-            this.lblImagenCargada.Location = new System.Drawing.Point(16, 83);
+            this.lblImagenCargada.Location = new System.Drawing.Point(388, 98);
             this.lblImagenCargada.Name = "lblImagenCargada";
             this.lblImagenCargada.Size = new System.Drawing.Size(103, 13);
             this.lblImagenCargada.TabIndex = 17;
@@ -255,30 +256,30 @@
             // gbImagenes
             // 
             this.gbImagenes.Controls.Add(this.texUrlimagen);
-            this.gbImagenes.Controls.Add(this.btnCargarImagenArticulo);
+            this.gbImagenes.Controls.Add(this.btnCargarMasImagenArticulo);
             this.gbImagenes.Controls.Add(this.lblUrlimagen);
             this.gbImagenes.Controls.Add(this.picImagenArticulo);
             this.gbImagenes.Controls.Add(this.lblCargarImagen);
             this.gbImagenes.Controls.Add(this.lblImagenCargada);
             this.gbImagenes.Location = new System.Drawing.Point(55, 324);
             this.gbImagenes.Name = "gbImagenes";
-            this.gbImagenes.Size = new System.Drawing.Size(335, 357);
+            this.gbImagenes.Size = new System.Drawing.Size(807, 357);
             this.gbImagenes.TabIndex = 2;
             this.gbImagenes.TabStop = false;
             this.gbImagenes.Text = "Imagenes del Artículo";
             // 
             // texUrlimagen
             // 
-            this.texUrlimagen.Location = new System.Drawing.Point(140, 57);
+            this.texUrlimagen.Location = new System.Drawing.Point(188, 57);
             this.texUrlimagen.Name = "texUrlimagen";
-            this.texUrlimagen.Size = new System.Drawing.Size(181, 19);
+            this.texUrlimagen.Size = new System.Drawing.Size(573, 19);
             this.texUrlimagen.TabIndex = 6;
             this.texUrlimagen.Leave += new System.EventHandler(this.texUrlimagen_Leave);
             // 
             // lblUrlimagen
             // 
             this.lblUrlimagen.AutoSize = true;
-            this.lblUrlimagen.Location = new System.Drawing.Point(16, 60);
+            this.lblUrlimagen.Location = new System.Drawing.Point(44, 60);
             this.lblUrlimagen.Name = "lblUrlimagen";
             this.lblUrlimagen.Size = new System.Drawing.Size(118, 13);
             this.lblUrlimagen.TabIndex = 5;
@@ -321,7 +322,7 @@
         private System.Windows.Forms.ComboBox cmbMarca;
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.PictureBox picImagenArticulo;
-        private System.Windows.Forms.Button btnCargarImagenArticulo;
+        private System.Windows.Forms.Button btnCargarMasImagenArticulo;
         private System.Windows.Forms.Button GuardarImagen;
         private System.Windows.Forms.Button btnCancelarImagenArticulo;
         private System.Windows.Forms.Label lblCodigo;

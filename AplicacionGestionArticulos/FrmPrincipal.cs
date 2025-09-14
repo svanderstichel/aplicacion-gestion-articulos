@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacionGestionArticulos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -138,11 +139,34 @@ namespace presentacion
                 form.Close();
             }
 
-            //instancia ventana de bienvenida
-            FrmCategorias frmCategorias = new FrmCategorias();
-            frmCategorias.MdiParent = this;
-            frmCategorias.Show();
+            
+        }
+
+        
+
+        private void cargarMàsImagenesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //verifica que la tabla no exista antes de instanciarla
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(FrmCargarMasImagenes))
+                {
+                    MessageBox.Show("Ya existe una ventaba abierta, complete los campos");
+                    return;
+                }
+            }
+            // Cierro todos las ventanas abiertas
+            foreach (Form form in this.MdiChildren)
+            {
+                form.Close();
+            }
+                //instancia ventana de alta articulo
+                FrmCargarMasImagenes frmCargarImagenes = new FrmCargarMasImagenes();
+                frmCargarImagenes.MdiParent = this;
+                frmCargarImagenes.Show();
+            
         }
     }
-}
+    }
+
 
