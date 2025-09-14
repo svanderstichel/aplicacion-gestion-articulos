@@ -290,7 +290,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(891, 688);
+            this.ClientSize = new System.Drawing.Size(976, 751);
             this.Controls.Add(this.gbImagenes);
             this.Controls.Add(this.gbClasificacion);
             this.Controls.Add(this.GuardarImagen);
