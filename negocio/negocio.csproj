@@ -46,6 +46,7 @@
     <Compile Include="AccesoDatosMarca.cs" />
     <Compile Include="AltaArticuloNegocio.cs" />
     <Compile Include="CategoriaNegocio.cs" />
+    <Compile Include="ImagenNegocio.cs" />
     <Compile Include="ListarArticuloNegocio.cs" />
     <Compile Include="MarcaNegocio.cs" />
     <Compile Include="ModificarArticuloNegocio.cs" />
