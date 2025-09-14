@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Net;
 
 namespace negocio
 {
@@ -22,7 +23,7 @@ namespace negocio
                 //conexion.ConnectionString = "server=localhost\\SQLEXPRESS01;database=CATALOGO_P3_DB;integrated security=true"; lo comento pues esta uso yo
                 conexion.ConnectionString = "server=localhost\\SQLEXPRESS;database=CATALOGO_P3_DB;integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT A.Id, A.Codigo as Codigo, \r\nA.Nombre, \r\nA.Descripcion, \r\nM.Descripcion AS Marca, \r\nC.Descripcion AS Categoria, \r\nA.Precio, M.Id as IdMarca, C.Id as IdCategoria \r\nFROM ARTICULOS A\r\nLEFT JOIN MARCAS M ON A.IdMarca = M.Id\r\nLEFT JOIN CATEGORIAS C ON A.idCategoria = C.Id;";
+                comando.CommandText = "SELECT A.Id, A.Codigo as Codigo, \r\nA.Nombre, \r\nA.Descripcion, \r\nM.Descripcion AS Marca, \r\nC.Descripcion AS Categoria, \r\nA.Precio, M.Id as IdMarca, C.Id as IdCategoria \r\nFROM ARTICULOS A\r\nLEFT JOIN MARCAS M ON A.IdMarca = M.Id\r\nLEFT JOIN CATEGORIAS C ON A.idCategoria = C.Id";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -50,7 +51,7 @@ namespace negocio
                 }
                 return listaArticulos;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw (ex);
             }
@@ -60,5 +61,35 @@ namespace negocio
             }
 
         }
-    }
+        public List<Imagen> ListarFotos(Articulo articulo)
+        {
+            List<Imagen> listaFotos = new List<Imagen>();
+            AccesoDatos datos = new AccesoDatos();
+            datos.setearConsulta("SELECT ImagenUrl FROM IMAGENES WHERE IdArticulo = @id");
+            datos.setearParametro("id", articulo.IdArticulo);
+
+            try
+            {
+                datos.ejercutarLectura();
+                while (datos.lector.Read())
+                {
+                    Imagen aux = new Imagen();
+                    aux.Url = Convert.ToString(datos.lector["ImagenUrl"]);
+
+                    listaFotos.Add(aux);
+                }
+                return listaFotos;
+
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+    } 
 }
+
