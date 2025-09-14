@@ -289,7 +289,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1364, 749);
+            this.ClientSize = new System.Drawing.Size(891, 688);
             this.Controls.Add(this.gbImagenes);
             this.Controls.Add(this.gbClasificacion);
             this.Controls.Add(this.GuardarImagen);
@@ -299,7 +299,6 @@
             this.MinimizeBox = false;
             this.Name = "FrmAltaArticulo";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear nuevo artículo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmAltaArticulo_Load);

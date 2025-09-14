@@ -22,7 +22,7 @@ namespace negocio
                 //conexion.ConnectionString = "server=localhost\\SQLEXPRESS01;database=CATALOGO_P3_DB;integrated security=true"; lo comento pues esta uso yo
                 conexion.ConnectionString = "server=localhost\\SQLEXPRESS;database=CATALOGO_P3_DB;integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT A.Id, A.Codigo as Codigo, \r\nA.Nombre, \r\nA.Descripcion, \r\nM.Descripcion AS Marca, \r\nC.Descripcion AS Categoria, \r\nA.Precio\r\nFROM ARTICULOS A\r\nLEFT JOIN MARCAS M ON A.IdMarca = M.Id\r\nLEFT JOIN CATEGORIAS C ON A.idCategoria = C.Id;";
+                comando.CommandText = "SELECT A.Id, A.Codigo as Codigo, \r\nA.Nombre, \r\nA.Descripcion, \r\nM.Descripcion AS Marca, \r\nC.Descripcion AS Categoria, \r\nA.Precio, M.Id as IdMarca, C.Id as IdCategoria \r\nFROM ARTICULOS A\r\nLEFT JOIN MARCAS M ON A.IdMarca = M.Id\r\nLEFT JOIN CATEGORIAS C ON A.idCategoria = C.Id;";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -41,6 +41,10 @@ namespace negocio
                     aux.Categoria.Nombre = Convert.ToString(lector["Categoria"]);
                     if (!(lector["Precio"] is DBNull))
                         aux.Precio = Convert.ToDecimal(lector["Precio"]);
+                    if (!(lector["IdMarca"] is DBNull))
+                        aux.Marca.IdMarca = Convert.ToInt32(lector["IdMarca"]);
+                    if (!(lector["IdCategoria"] is DBNull))
+                        aux.Categoria.IdCategoria = Convert.ToInt32(lector["IdCategoria"]);
 
                     listaArticulos.Add(aux);
                 }

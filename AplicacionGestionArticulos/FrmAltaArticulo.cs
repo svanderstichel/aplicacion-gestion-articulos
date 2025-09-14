@@ -15,21 +15,31 @@ namespace presentacion
     
 
     public partial class FrmAltaArticulo : Form
-    { 
+    {
+        private Articulo articulo = null;
         public FrmAltaArticulo()
         {
             InitializeComponent();
+        }
+        public FrmAltaArticulo(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+
         }
 
         private void Guardar_Click(object sender, EventArgs e)
 
         { 
             
-            Articulo articulo = new Articulo();
+//            Articulo articulo = new Articulo();
             AltaArticuloNegocio alta = new AltaArticuloNegocio();
 
             try
             {
+                if (articulo == null)
+                    articulo = new Articulo();
+
                 articulo.CodigoArticulo = txtCodigoProducto.Text; // saque el casteo a int pues ahora es string en la clase
                 articulo.Nombre = txtNombreArtículo.Text;
                 articulo.Descripcion = txtDescripcionArtículo.Text;
@@ -39,8 +49,18 @@ namespace presentacion
                 articulo.imagen= texUrlimagen.Text;
                 //articulo.ListaImagenes.Add();
 
-                alta.agregar(articulo);
-                MessageBox.Show("Artículo agregado exitosamente!");
+                if (articulo.IdArticulo != 0)
+                {
+                    ModificarArticuloNegocio modificar = new ModificarArticuloNegocio();
+                    modificar.Modificar(articulo);
+                    MessageBox.Show("Artículo modificado exitosamente!");
+                }
+                else
+                {
+                    alta.agregar(articulo);
+                    MessageBox.Show("Artículo agregado exitosamente!");
+                }
+
                 Close();
                 FrmPrincipal volver = new FrmPrincipal();
                 volver.ShowDialog();
@@ -61,9 +81,11 @@ namespace presentacion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            FrmPrincipal volver = new FrmPrincipal  ();
-            volver.ShowDialog();
+            // cierro todos los formularios hijos abiertos
+            foreach (Form form in this.MdiParent.MdiChildren)
+            {
+                form.Close();
+            }
         }
 
         private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,31 +106,30 @@ namespace presentacion
         private void FrmAltaArticulo_Load(object sender, EventArgs e)
         {
             MarcaNegocio marca = new MarcaNegocio();
+            CategoriaNegocio categoria = new CategoriaNegocio();
             try
             {
                 cmbMarca.DataSource = marca.Listar();
-
-
+                cmbMarca.ValueMember = "IdMarca";
+                cmbMarca.DisplayMember = "Nombre";
+                cmbCategoria.DataSource = categoria.Listar();
+                cmbCategoria.ValueMember = "IdCategoria";
+                cmbCategoria.DisplayMember = "Nombre";
+                if (articulo != null)
+                {
+                    txtCodigoProducto.Text = articulo.CodigoArticulo;
+                    txtNombreArtículo.Text = articulo.Nombre;
+                    txtDescripcionArtículo.Text = articulo.Descripcion;
+                    txtPrecio.Text = Convert.ToString(articulo.Precio);
+                    cmbMarca.SelectedValue = articulo.Marca.IdMarca;
+                    cmbCategoria.SelectedValue = articulo.Categoria.IdCategoria;
+                }
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.ToString());
             }
-
-            CategoriaNegocio categoria = new CategoriaNegocio();
-                try
-                {
-                    cmbCategoria.DataSource = categoria.Listar();
-           
-
-
-                }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show(ex.ToString());
-                }
         }
 
         
